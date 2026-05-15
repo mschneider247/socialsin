@@ -15,22 +15,22 @@ const SCREENSHOTS = [
 
 const FEATURES = [
   {
-    label: 'RPG',
-    title: 'Level Up Your Beast',
+    label: 'You Are the Doctor',
+    title: 'Train Your Monster',
     description:
-      'Every habit you build earns XP across six stat categories — Exercise, Health, Clean, Community, Creativity, and Mental. Watch your character evolve as you grow.',
+      'Pick one of six lovably out-of-shape creatures — then name it, dress it, and drag it into shape through daily habits. Your monster is hopeless without you.',
   },
   {
-    label: 'Streaks',
-    title: 'Chase Your Streaks',
+    label: 'Arsenal',
+    title: 'Habits Earn Battle Moves',
     description:
-      'Daily streaks fuel your character\'s power. Stay consistent, rack up days, and climb habit-specific leaderboards against friends and rivals.',
+      'Every completed habit drops a combat move into your arsenal. Build a loadout from 242 possible moves and challenge rivals. Lose a ranked battle and those moves are consumed — go earn them back.',
   },
   {
-    label: 'Insights',
-    title: 'Track Everything',
+    label: '50+ Habits',
+    title: 'Six Stats. Real Stakes.',
     description:
-      'Log meals and macros, monitor weight trends, and visualize months of habit completions at a glance. Real data for real progress.',
+      'Train across Exercise, Health, Clean, Community, Creativity, and Mental. Over 50 habits with five tier levels each — harder tiers unlock more powerful combat moves.',
   },
 ]
 
@@ -87,6 +87,19 @@ export default function App() {
         </div>
       </section>
 
+      <section className="lab-quote-section">
+        <div className="lab-quote-card">
+          <span className="lab-card-label">LAB NOTES</span>
+          <img src="/lab-assistant.png" alt="Lab Assistant" className="lab-assistant-img" />
+          <blockquote className="lab-quote-text">
+            <p>
+              "Vizout your daily work, ze monster languishes, dahling&hellip; and your rivals? Zey do
+              not rest. Ve cannot have zis!"
+            </p>
+          </blockquote>
+        </div>
+      </section>
+
       <section className="features-section">
         <div className="features-inner">
           {FEATURES.map((f) => (
@@ -102,7 +115,7 @@ export default function App() {
       <section className="download-section">
         <h2 className="section-title">Get the Game</h2>
         <p className="section-sub">
-          Habit Beast is in beta. Join the community and help shape the game.
+          Habit Beast is still being actively developed. Join the community and help shape the game.
         </p>
         <div className="download-cards">
           <div className="dl-card">
@@ -154,6 +167,13 @@ export default function App() {
 
       <footer className="site-footer">
         <p>© {new Date().getFullYear()} Social Sin LLC. All rights reserved.</p>
+        <a
+          href="https://mschneider247.github.io/socialsinllc-habitbeast/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Privacy Policy
+        </a>
       </footer>
     </div>
   )
