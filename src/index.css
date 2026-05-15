@@ -1,0 +1,37 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0a0d14;
+  --bg-card: #131720;
+  --teal: #00e5c8;
+  --teal-mid: rgba(0, 229, 200, 0.5);
+  --teal-dim: rgba(0, 229, 200, 0.1);
+  --teal-glow: rgba(0, 229, 200, 0.3);
+  --gold: #f5a623;
+  --text: #dce4f0;
+  --text-muted: #6b7a99;
+  --border: rgba(0, 229, 200, 0.18);
+  --font: 'Rajdhani', system-ui, sans-serif;
+  --radius: 0.75rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
