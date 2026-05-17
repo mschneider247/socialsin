@@ -114,7 +114,7 @@ export default function App() {
             <br />
             BEAST
           </h1>
-          <p className="tagline">Build real habits. Level up your life.</p>
+          <p className="tagline">Doctor! Train the monster. Challenge your rivals.</p>
           <div className="hero-cta">
             <a
               href={LINKS.ios}
