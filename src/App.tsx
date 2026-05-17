@@ -115,6 +115,7 @@ export default function App() {
             BEAST
           </h1>
           <p className="tagline">Doctor! Train the monster. Challenge your rivals.</p>
+          <p className="hero-subheadline">Your habits are your weapons. Lose the battle, lose the moves. Earn them back.</p>
           <div className="hero-cta">
             <a
               href={LINKS.ios}
@@ -179,7 +180,7 @@ export default function App() {
       <section className="download-section">
         <h2 className="section-title">Get the Game</h2>
         <p className="section-sub">
-          Habit Beast is still being actively developed. Join the community and help shape the game.
+          Join the founding community. Shape the game from the ground up.
         </p>
         <div className="download-cards">
           <div className="dl-card">
