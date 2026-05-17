@@ -56,12 +56,6 @@ const LINKS = {
   discord: 'https://discord.gg/4mQYnGkYw',
 }
 
-const SCREENSHOTS = [
-  { src: '/v3o1o0.png', alt: 'Character stats and habit dashboard' },
-  { src: '/playStoreMonsterRecord.png', alt: 'Habit history and progress tracking' },
-  { src: '/playStoreLeaderboardScreen.png', alt: 'Leaderboard competition' },
-]
-
 const FEATURES = [
   {
     label: 'You Are the Doctor',
@@ -139,16 +133,53 @@ export default function App() {
         </div>
       </section>
 
-      <section className="screenshots-section">
-        <div className="screenshots">
-          {SCREENSHOTS.map((s, i) => (
-            <div
-              key={s.src}
-              className={`screenshot-frame${i === 1 ? ' screenshot-frame--center' : ''}`}
-            >
-              <img src={s.src} alt={s.alt} loading="lazy" decoding="async" />
+      <section className="media-section">
+        <div className="media-row media-row--primary">
+          <div className="media-col media-col--sad">
+            <img src="/sad.jpg" alt="Sad monster mood" loading="lazy" decoding="async" className="media-img" />
+          </div>
+          <div className="media-col media-col--happy">
+            <img src="/happy.jpg" alt="Happy monster mood" loading="lazy" decoding="async" className="media-img" />
+            <p className="media-label">Your monster feels everything</p>
+          </div>
+          <div className="media-col media-col--video">
+            <video
+              className="media-video"
+              src="/BattleDemoRTP.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+          </div>
+          <div className="media-col media-col--arsenal1">
+            <img src="/arsenal1.jpg" alt="Battle arsenal weapons" loading="lazy" decoding="async" className="media-img" />
+            <p className="media-label">Habits become weapons</p>
+          </div>
+          <div className="media-col media-col--arsenal2">
+            <img src="/arsenal2.jpg" alt="Battle arsenal expanded" loading="lazy" decoding="async" className="media-img" />
+          </div>
+        </div>
+
+        <div className="media-row media-row--secondary">
+          <div className="media-col">
+            <div className="media-frame">
+              <img src="/record1.jpg" alt="Habit streak tracking" loading="lazy" decoding="async" />
             </div>
-          ))}
+            <p className="media-label">Track every streak</p>
+          </div>
+          <div className="media-col">
+            <div className="media-frame">
+              <img src="/rivals.jpg" alt="Rivals leaderboard" loading="lazy" decoding="async" />
+            </div>
+            <p className="media-label">Your rivals are already training</p>
+          </div>
+          <div className="media-col">
+            <div className="media-frame">
+              <img src="/record 2.jpg" alt="Full monster record" loading="lazy" decoding="async" />
+            </div>
+            <p className="media-label">Your full monster record</p>
+          </div>
         </div>
       </section>
 
