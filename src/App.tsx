@@ -50,9 +50,7 @@ function HexBackground() {
 
 const LINKS = {
   ios: 'https://apps.apple.com/us/app/habit-beast-monster-trainer/id6760268226',
-  android: 'https://groups.google.com/g/habit-beast-beta-testers',
-  androidTesting: 'https://play.google.com/apps/testing/com.socialsin.habitbeast',
-  betaCommunity: 'https://groups.google.com/g/habit-beast-beta-testers',
+  android: 'https://play.google.com/store/apps/details?id=com.socialsin.habitbeast',
   discord: 'https://discord.gg/4mQYnGkYw',
 }
 
@@ -234,12 +232,12 @@ export default function App() {
             </div>
             <h3>Android</h3>
             <a
-              href={LINKS.betaCommunity}
+              href={LINKS.android}
               className="btn btn-primary full"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Become a Beta Tester
+              Get it on Google Play
             </a>
           </div>
           <div className="dl-card">
