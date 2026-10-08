@@ -1,0 +1,5 @@
+# Internal design doc: keep local only, never publish
+habitbeast-architecture-v4.md
+
+# Prerender build output (SSR bundle used only at build time)
+dist-server/

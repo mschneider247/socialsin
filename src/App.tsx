@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import './App.css'
 
 // ── Hex background ──────────────────────────────────────────────────────────
@@ -59,7 +60,7 @@ const FEATURES = [
     label: 'You Are the Doctor',
     title: 'Train Your Monster',
     description:
-      'Pick one of six lovably out-of-shape creatures — then name it, dress it, and drag it into shape through daily habits. Your monster is hopeless without you.',
+      'Pick one of nine lovably out-of-shape creatures — then name it, dress it, and drag it into shape through daily habits. Your monster is hopeless without you.',
   },
   {
     label: 'Arsenal',
@@ -76,9 +77,14 @@ const FEATURES = [
 ]
 
 export default function App() {
+  // The hex grid is decorative and randomized per load, so it is left out of
+  // the prerendered HTML (scripts/prerender.mjs) and drawn once hydrated.
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+
   return (
     <div className="app">
-      <HexBackground />
+      {mounted && <HexBackground />}
       <header className="site-header">
         <span className="company-name">Social Sin LLC</span>
         <nav className="header-nav" aria-label="Download links">
@@ -203,6 +209,17 @@ export default function App() {
               <p className="feature-desc">{f.description}</p>
             </div>
           ))}
+          <div className="feature-card" style={{ gridColumn: '1 / -1' }}>
+            <span className="feature-label">From the Developer</span>
+            <h3 className="feature-title">Built for Brains That Hate Boring Trackers</h3>
+            <p className="feature-desc">
+              I have ADHD, and every habit app I tried turned into a chore list I quietly abandoned. So I
+              built the one I'd keep opening: a monster that needs me, rivals who notice when I slack, and
+              goofy animations as a reward. No ads, and every piece of art is hand-drawn by humans. If
+              streak counters have never worked on you, this might.
+            </p>
+            <p className="feature-desc">— Michael, Social Sin LLC</p>
+          </div>
         </div>
       </section>
 

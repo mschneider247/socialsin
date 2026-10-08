@@ -3,14 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Habit Beast – Social Sin LLC</title>
-    <meta name="description" content="Habit Beast is a monster training RPG for iOS and Android. Train a monster, build real habits, and battle your rivals." />
+    <title>Habit Beast: Monster Habit RPG for iOS & Android – Social Sin LLC</title>
+    <meta name="description" content="Habit Beast is a monster-raising RPG. Every real habit you complete trains your monster and earns battle moves for PvP against rivals. Free on iOS and Android." />
+    <link rel="canonical" href="https://socialsin.com/" />
+    <meta name="theme-color" content="#0a0d14" />
+    <link rel="icon" type="image/png" href="/icon-512.png" />
+    <link rel="apple-touch-icon" href="/icon-512.png" />
+
+    <!-- Link previews (Discord, iMessage, Slack, Facebook, X, Reddit) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Habit Beast" />
+    <meta property="og:url" content="https://socialsin.com/" />
+    <meta property="og:title" content="Habit Beast: Monster Habit RPG" />
+    <meta property="og:description" content="Raise a monster with real habits, then battle your rivals. Free on iOS and Android." />
+    <meta property="og:image" content="https://socialsin.com/og-image.jpg" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="500" />
+    <meta property="og:image:alt" content="A lab full of hand-drawn Habit Beast monsters in their gear" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Habit Beast: Monster Habit RPG" />
+    <meta name="twitter:description" content="Raise a monster with real habits, then battle your rivals. Free on iOS and Android." />
+    <meta name="twitter:image" content="https://socialsin.com/og-image.jpg" />
+
+    <!-- App Store smart banner in iPhone Safari -->
+    <meta name="apple-itunes-app" content="app-id=6760268226" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Habit Beast",
+        "alternateName": "HabitBeast",
+        "operatingSystem": "iOS, Android",
+        "applicationCategory": "GameApplication",
+        "description": "A monster-raising RPG where real habits train your monster and earn battle moves for PvP against rivals.",
+        "image": "https://socialsin.com/og-image.jpg",
+        "url": "https://socialsin.com/",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Organization", "name": "Social Sin LLC", "url": "https://socialsin.com/" },
+        "sameAs": [
+          "https://apps.apple.com/us/app/habit-beast-monster-trainer/id6760268226",
+          "https://play.google.com/store/apps/details?id=com.socialsin.habitbeast"
+        ]
+      }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Filled at build time by scripts/prerender.mjs so crawlers and link
+         previews see the real page text; React then takes over (main.tsx). -->
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

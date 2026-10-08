@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You've been challenged – Habit Beast</title>
+    <meta name="description" content="A Doctor wants you as a rival. Raise your own monster with real habits in Habit Beast, free on iOS and Android." />
+    <link rel="canonical" href="https://socialsin.com/get/" />
+    <meta name="theme-color" content="#0a0d14" />
+    <link rel="icon" type="image/png" href="/icon-512.png" />
+
+    <!-- Invite link previews. Bots don't run JS, so this stays generic;
+         the monster name from ?m= is only filled in for real visitors. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Habit Beast" />
+    <meta property="og:url" content="https://socialsin.com/get/" />
+    <meta property="og:title" content="You've been challenged to Habit Beast" />
+    <meta property="og:description" content="A Doctor wants you as a rival. Raise a monster with real habits, then battle. Free on iOS and Android." />
+    <meta property="og:image" content="https://socialsin.com/og-image.jpg" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="500" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="You've been challenged to Habit Beast" />
+    <meta name="twitter:description" content="A Doctor wants you as a rival. Raise a monster with real habits, then battle." />
+    <meta name="twitter:image" content="https://socialsin.com/og-image.jpg" />
+    <meta name="apple-itunes-app" content="app-id=6760268226" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #0a0d14;
+        --bg-card: #131720;
+        --teal: #00e5c8;
+        --gold: #f5a623;
+        --text: #dce4f0;
+        --text-muted: #6b7a99;
+        --border: rgba(0, 229, 200, 0.18);
+      }
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 16px;
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Rajdhani', system-ui, sans-serif;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+      main {
+        width: 100%;
+        max-width: 440px;
+        text-align: center;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .hero { width: 100%; display: block; aspect-ratio: 1024 / 500; object-fit: cover; }
+      .body { padding: 24px 20px 28px; }
+      .eyebrow { color: var(--text-muted); font-weight: 700; letter-spacing: 0.2em; font-size: 0.8rem; }
+      h1 { font-size: 2rem; line-height: 1.1; letter-spacing: 0.04em; margin: 6px 0 10px; }
+      h1 .name { color: var(--gold); overflow-wrap: anywhere; }
+      p { color: var(--text); font-size: 1.05rem; }
+      .code {
+        margin: 18px 0 22px;
+        padding: 12px;
+        border: 1px dashed var(--border);
+        border-radius: 10px;
+        font-size: 0.95rem;
+        color: var(--text-muted);
+      }
+      .code strong { display: block; color: var(--teal); font-size: 1.4rem; letter-spacing: 0.08em; overflow-wrap: anywhere; }
+      .btn {
+        display: block;
+        padding: 14px;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 1.05rem;
+        letter-spacing: 0.06em;
+        text-decoration: none;
+        border: 1px solid var(--teal);
+        color: var(--teal);
+        margin-top: 10px;
+      }
+      .btn.primary { background: var(--teal); color: var(--bg); }
+      .foot { margin-top: 18px; font-size: 0.85rem; color: var(--text-muted); }
+      .foot a { color: var(--text-muted); }
+      [hidden] { display: none !important; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img class="hero" src="/og-image.jpg" alt="Hand-drawn Habit Beast monsters in the lab" />
+      <div class="body">
+        <div class="eyebrow">HABIT BEAST</div>
+        <h1 id="headline">You've been challenged</h1>
+        <p>Raise a monster with real habits. Every habit you finish earns it a battle move. Then come fight.</p>
+
+        <div class="code" id="code" hidden>
+          After installing, open <em>Leaderboard → Rivals &amp; Friends → Add a Friend</em> and search
+          <strong id="code-name"></strong>
+        </div>
+
+        <a class="btn primary" id="btn-ios" href="https://apps.apple.com/app/id6760268226">Download on the App Store</a>
+        <a class="btn primary" id="btn-android" href="https://play.google.com/store/apps/details?id=com.socialsin.habitbeast">Get it on Google Play</a>
+
+        <div class="foot">Free to play · No ads · <a href="/">socialsin.com</a></div>
+      </div>
+    </main>
+
+    <script>
+      (function () {
+        // ?m=<monster name> from the in-app invite. Written with textContent
+        // only (never innerHTML) and length-capped: it's user-controlled.
+        var params = new URLSearchParams(location.search);
+        var name = (params.get('m') || '').trim().slice(0, 30);
+        if (name) {
+          var headline = document.getElementById('headline');
+          headline.textContent = '';
+          var span = document.createElement('span');
+          span.className = 'name';
+          span.textContent = name.toUpperCase();
+          headline.appendChild(span);
+          headline.appendChild(document.createTextNode(' wants a rival'));
+          document.getElementById('code-name').textContent = name;
+          document.getElementById('code').hidden = false;
+          document.title = name + ' wants a rival – Habit Beast';
+        }
+
+        // Lead with this visitor's store; desktop sees both.
+        var ua = navigator.userAgent || '';
+        var isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+        var isAndroid = /Android/.test(ua);
+        if (isIOS) {
+          document.getElementById('btn-android').className = 'btn';
+          document.getElementById('btn-android').textContent = 'On Android? Google Play';
+        } else if (isAndroid) {
+          var ios = document.getElementById('btn-ios');
+          ios.className = 'btn';
+          ios.textContent = 'On iPhone? App Store';
+          ios.parentNode.insertBefore(document.getElementById('btn-android'), ios);
+        }
+      })();
+    </script>
+  </body>
+</html>
