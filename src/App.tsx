@@ -55,6 +55,17 @@ const LINKS = {
   discord: 'https://discord.gg/4mQYnGkYw',
 }
 
+// Hero demo clip — swap the file in public/ and update this one path.
+const DEMO_VIDEO = '/BattleDemoRTP.mp4'
+
+// The Dig leads (players took to it more than PvP); habits stay the engine.
+const DIG_FEATURE = {
+  label: 'The Dig',
+  title: 'Dig Your Way Out',
+  description:
+    'Your monster wants out of the lab. Tunnel up a pitch-black silo by the glow of a single light: carve paths, build ladders and supports, dodge falling rocks, and fend off termite swarms that chew through everything you build. Bosses lie buried in the dirt and brain slugs hide in the deep. Keep your habits and the dig gets easier. Skip a few days and it gets brutal.',
+}
+
 const FEATURES = [
   {
     label: 'You Are the Doctor',
@@ -63,18 +74,26 @@ const FEATURES = [
       'Pick one of nine lovably out-of-shape creatures — then name it, dress it, and drag it into shape through daily habits. Your monster is hopeless without you.',
   },
   {
-    label: 'Arsenal',
-    title: 'Habits Earn Battle Moves',
-    description:
-      'Every completed habit drops a combat move into your arsenal. Build a loadout from 242 possible moves and challenge rivals. Lose a ranked battle and those moves are consumed — go earn them back.',
-  },
-  {
-    label: '50+ Habits',
+    label: '60+ Habits',
     title: 'Six Stats. Real Stakes.',
     description:
-      'Train across Exercise, Health, Clean, Community, Creativity, and Mental. Over 50 habits with five tier levels each — harder tiers unlock more powerful combat moves.',
+      'Train across Exercise, Health, Clean, Community, Creativity, and Mental. 60+ habits with up to five tiers each — every completion earns XP and battle moves, and harder tiers unlock stronger ones.',
+  },
+  {
+    label: 'Arsenal',
+    title: 'Then Challenge Your Rivals',
+    description:
+      'Build a loadout from hundreds of possible moves and take on real players and lab-bred bots. Lose a ranked battle and those moves are consumed — go earn them back.',
   },
 ]
+
+// Previewed on the site only — store listings describe just the shipped build.
+const COMING_SOON = {
+  label: 'Next From Ze Lab · In Development',
+  title: 'Organ Trail',
+  description:
+    'A new minigame loosely inspired by a certain 90s pioneer classic. Trade battle moves for supplies, haul your monster across a strange and shifting landscape, haggle with a very familiar shopkeeper in a brand-new hat, hunt and fish to stay fed, earn brain slugs, and fight whatever crawls out of the fog.',
+}
 
 export default function App() {
   // The hex grid is decorative and randomized per load, so it is left out of
@@ -112,8 +131,8 @@ export default function App() {
             <br />
             BEAST
           </h1>
-          <p className="tagline">Doctor! Train the monster. Challenge your rivals.</p>
-          <p className="hero-subheadline">Your habits are your weapons. Lose the battle, lose the moves. Earn them back.</p>
+          <p className="tagline">Doctor! Train the monster. Dig your way out.</p>
+          <p className="hero-subheadline">Your habits power the dig. Skip them and ze silo fights back.</p>
           <div className="hero-cta">
             <a
               href={LINKS.ios}
@@ -149,7 +168,7 @@ export default function App() {
           <div className="media-col media-col--video">
             <video
               className="media-video"
-              src="/BattleDemoRTP.mp4"
+              src={DEMO_VIDEO}
               autoPlay
               muted
               loop
@@ -193,8 +212,8 @@ export default function App() {
           <img src="/lab-assistant.png" alt="Lab Assistant" className="lab-assistant-img" loading="lazy" decoding="async" />
           <blockquote className="lab-quote-text">
             <p>
-              "Vizout your daily work, ze monster languishes, dahling&hellip; and your rivals? Zey do
-              not rest. Ve cannot have zis!"
+              "Ze monster is digging again&hellip; it is a disgrace! Every habit you skip, ze silo grows
+              meaner, dahling. And your rivals? Zey do not rest. Ve cannot have zis!"
             </p>
           </blockquote>
         </div>
@@ -202,6 +221,11 @@ export default function App() {
 
       <section className="features-section">
         <div className="features-inner">
+          <div className="feature-card" style={{ gridColumn: '1 / -1' }}>
+            <span className="feature-label">{DIG_FEATURE.label}</span>
+            <h3 className="feature-title">{DIG_FEATURE.title}</h3>
+            <p className="feature-desc">{DIG_FEATURE.description}</p>
+          </div>
           {FEATURES.map((f) => (
             <div key={f.label} className="feature-card">
               <span className="feature-label">{f.label}</span>
@@ -214,11 +238,16 @@ export default function App() {
             <h3 className="feature-title">Built for Brains That Hate Boring Trackers</h3>
             <p className="feature-desc">
               I have ADHD, and every habit app I tried turned into a chore list I quietly abandoned. So I
-              built the one I'd keep opening: a monster that needs me, rivals who notice when I slack, and
-              goofy animations as a reward. No ads, and every piece of art is hand-drawn by humans. If
+              built the one I'd keep opening: a monster that needs me, a silo to dig out of, rivals who
+              notice when I slack, and goofy animations as a reward. No ads, and every piece of art is hand-drawn by humans. If
               streak counters have never worked on you, this might.
             </p>
             <p className="feature-desc">— Michael, Social Sin LLC</p>
+          </div>
+          <div className="feature-card" style={{ gridColumn: '1 / -1' }}>
+            <span className="feature-label">{COMING_SOON.label}</span>
+            <h3 className="feature-title">{COMING_SOON.title}</h3>
+            <p className="feature-desc">{COMING_SOON.description}</p>
           </div>
         </div>
       </section>
