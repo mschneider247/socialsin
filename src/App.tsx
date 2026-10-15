@@ -56,7 +56,7 @@ const LINKS = {
 }
 
 // Hero demo clip — swap the file in public/ and update this one path.
-const DEMO_VIDEO = '/BattleDemoRTP.mp4'
+const DEMO_VIDEO = '/DigDemo.mp4'
 
 // The Dig leads (players took to it more than PvP); habits stay the engine.
 const DIG_FEATURE = {
