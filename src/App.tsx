@@ -85,7 +85,47 @@ const FEATURES = [
     description:
       'Build a loadout from hundreds of possible moves and take on real players and lab-bred bots. Lose a ranked battle and those moves are consumed — go earn them back.',
   },
+  {
+    label: 'Ze D20',
+    title: 'Roll for Trouble',
+    description:
+      'Every so often a twenty-sided die peeks into the lab. Roll it for one of twenty random encounters: a mimic that grows teeth, a surprise ambush, a brain swap, a wardrobe malfunction. Land a critical success and a bounty goes up on one of your habits, worth a brain slug if your monster finishes it within the hour.',
+  },
+  {
+    label: 'Hands-Free',
+    title: 'Ze Lab Takes Dictation',
+    description:
+      'Speak your to-dos and the lab assistant writes them down. Hands busy mid-plank? Tell the habit timer START, STOP or LOG and it obeys.',
+  },
+  {
+    label: 'No Tricks',
+    title: 'Habits, Not Purchases',
+    description:
+      'No ads, ever, and every piece of art is hand-drawn by humans. Free to play through level 9; a membership unlocks level 10 and beyond, the full habit library, and the complete battle arsenal.',
+  },
 ]
+
+// Phone screenshots, served as resized WebP from public/img (cut from the
+// 1080×2340 originals with ffmpeg): 400w fills the desktop columns, 800w the
+// full-width mobile layout. width/height reserve the space so nothing jumps.
+function Shot({ name, alt, sizes, className }: { name: string; alt: string; sizes: string; className?: string }) {
+  return (
+    <img
+      src={`/img/${name}-800.webp`}
+      srcSet={`/img/${name}-400.webp 400w, /img/${name}-800.webp 800w`}
+      sizes={sizes}
+      width={800}
+      height={1734}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      className={className}
+    />
+  )
+}
+
+const PRIMARY_SIZES = '(max-width: 768px) 100vw, 170px'
+const SECONDARY_SIZES = '(max-width: 768px) 100vw, 340px'
 
 // Previewed on the site only — store listings describe just the shipped build.
 const COMING_SOON = {
@@ -127,7 +167,7 @@ export default function App() {
         <div className="hero-content">
           <p className="hero-eyebrow">Available Now</p>
           <h1 className="game-title">
-            HABIT
+            HABIT{' '}
             <br />
             BEAST
           </h1>
@@ -159,16 +199,30 @@ export default function App() {
       <section className="media-section">
         <div className="media-row media-row--primary">
           <div className="media-col media-col--sad">
-            <img src="/sad.jpg" alt="Sad monster mood" loading="lazy" decoding="async" className="media-img" />
+            <Shot
+              name="monster-sad"
+              alt="A sad, out-of-shape Habit Beast monster at level 3, with the day's habits still unchecked"
+              sizes={PRIMARY_SIZES}
+              className="media-img"
+            />
           </div>
           <div className="media-col media-col--happy">
-            <img src="/happy.jpg" alt="Happy monster mood" loading="lazy" decoding="async" className="media-img" />
+            <Shot
+              name="monster-happy"
+              alt="A happy, well-trained Habit Beast monster at level 29 in hand-drawn gear, ringed by its six stats"
+              sizes={PRIMARY_SIZES}
+              className="media-img"
+            />
             <p className="media-label">Your monster feels everything</p>
           </div>
           <div className="media-col media-col--video">
             <video
               className="media-video"
               src={DEMO_VIDEO}
+              poster="/img/dig-demo-poster.jpg"
+              width={480}
+              height={960}
+              aria-label="Gameplay: a habit timer logs a run, then the monster digs through the silo, meets a boss swarm and wins a battle"
               autoPlay
               muted
               loop
@@ -176,30 +230,52 @@ export default function App() {
             />
           </div>
           <div className="media-col media-col--arsenal1">
-            <img src="/arsenal1.jpg" alt="Battle arsenal weapons" loading="lazy" decoding="async" className="media-img" />
+            <Shot
+              name="arsenal-attack"
+              alt="Battle arsenal of attack moves earned from habits, like Scrub Blast and Water Laser"
+              sizes={PRIMARY_SIZES}
+              className="media-img"
+            />
             <p className="media-label">Habits become weapons</p>
           </div>
           <div className="media-col media-col--arsenal2">
-            <img src="/arsenal2.jpg" alt="Battle arsenal expanded" loading="lazy" decoding="async" className="media-img" />
+            <Shot
+              name="arsenal-heal"
+              alt="Battle arsenal of heal moves earned from habits, like Family Bond and Grateful Glow"
+              sizes={PRIMARY_SIZES}
+              className="media-img"
+            />
           </div>
         </div>
 
         <div className="media-row media-row--secondary">
           <div className="media-col">
             <div className="media-frame">
-              <img src="/record1.jpg" alt="Habit streak tracking" loading="lazy" decoding="async" />
+              <Shot
+                name="monster-record"
+                alt="A monster's record: combat stats, weight history, and a heatmap of active habits"
+                sizes={SECONDARY_SIZES}
+              />
             </div>
-            <p className="media-label">Track every streak</p>
+            <p className="media-label">Every streak, on ze record</p>
           </div>
           <div className="media-col">
             <div className="media-frame">
-              <img src="/rivals.jpg" alt="Rivals leaderboard" loading="lazy" decoding="async" />
+              <Shot
+                name="rivals-leaderboard"
+                alt="Leaderboard of rival monsters ranked by level and battle record"
+                sizes={SECONDARY_SIZES}
+              />
             </div>
             <p className="media-label">Your rivals are already training</p>
           </div>
           <div className="media-col">
             <div className="media-frame">
-              <img src="/record 2.jpg" alt="Full monster record" loading="lazy" decoding="async" />
+              <Shot
+                name="habit-history"
+                alt="Habit history heatmaps with streaks for gym, planks, cooking for others, and more"
+                sizes={SECONDARY_SIZES}
+              />
             </div>
             <p className="media-label">Your full monster record</p>
           </div>
@@ -209,7 +285,15 @@ export default function App() {
       <section className="lab-quote-section">
         <div className="lab-quote-card">
           <span className="lab-card-label">LAB NOTES</span>
-          <img src="/lab-assistant.png" alt="Lab Assistant" className="lab-assistant-img" loading="lazy" decoding="async" />
+          <img
+            src="/img/lab-assistant-240.webp"
+            width={240}
+            height={240}
+            alt="The lab assistant in a lab coat, taking notes on a clipboard"
+            className="lab-assistant-img"
+            loading="lazy"
+            decoding="async"
+          />
           <blockquote className="lab-quote-text">
             <p>
               "Ze monster is digging again&hellip; it is a disgrace! Every habit you skip, ze silo grows
@@ -219,7 +303,8 @@ export default function App() {
         </div>
       </section>
 
-      <section className="features-section">
+      <section className="features-section" aria-labelledby="features-heading">
+        <h2 id="features-heading" className="sr-only">What's in ze lab</h2>
         <div className="features-inner">
           <div className="feature-card" style={{ gridColumn: '1 / -1' }}>
             <span className="feature-label">{DIG_FEATURE.label}</span>
@@ -239,8 +324,8 @@ export default function App() {
             <p className="feature-desc">
               I have ADHD, and every habit app I tried turned into a chore list I quietly abandoned. So I
               built the one I'd keep opening: a monster that needs me, a silo to dig out of, rivals who
-              notice when I slack, and goofy animations as a reward. No ads, and every piece of art is hand-drawn by humans. If
-              streak counters have never worked on you, this might.
+              notice when I slack, and goofy animations as a reward. If streak counters have never worked
+              on you, this might.
             </p>
             <p className="feature-desc">— Michael, Social Sin LLC</p>
           </div>
@@ -308,7 +393,7 @@ export default function App() {
         <a
           href="https://mschneider247.github.io/socialsinllc-habitbeast/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="privacy-policy noopener noreferrer"
         >
           Privacy Policy
         </a>

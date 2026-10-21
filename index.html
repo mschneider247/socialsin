@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Habit Beast: Monster Habit RPG for iOS & Android – Social Sin LLC</title>
-    <meta name="description" content="Habit Beast is a monster-raising RPG. Real habits power your monster's dig out of a boss-filled silo and earn battle moves for PvP against rivals. Free on iOS and Android." />
+    <meta name="description" content="A gamified habit tracker for brains that hate boring ones. Real habits power your monster's dig out of a boss-filled silo. Free on iOS and Android." />
     <link rel="canonical" href="https://socialsin.com/" />
     <meta name="theme-color" content="#0a0d14" />
     <link rel="icon" type="image/png" href="/icon-512.png" />
@@ -12,6 +12,7 @@
 
     <!-- Link previews (Discord, iMessage, Slack, Facebook, X, Reddit) -->
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Habit Beast" />
     <meta property="og:url" content="https://socialsin.com/" />
     <meta property="og:title" content="Habit Beast: Monster Habit RPG" />
@@ -24,26 +25,77 @@
     <meta name="twitter:title" content="Habit Beast: Monster Habit RPG" />
     <meta name="twitter:description" content="Your habits power the dig. Tunnel your monster out of a boss-filled silo, then battle your rivals. Free on iOS and Android." />
     <meta name="twitter:image" content="https://socialsin.com/og-image.jpg" />
+    <meta name="twitter:image:alt" content="A lab full of hand-drawn Habit Beast monsters in their gear" />
 
     <!-- App Store smart banner in iPhone Safari -->
     <meta name="apple-itunes-app" content="app-id=6760268226" />
 
+    <!-- Structured data: the app, its maker, the site and the hero demo clip
+         (the VideoObject makes the clip eligible for video results). -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "MobileApplication",
-        "name": "Habit Beast",
-        "alternateName": "HabitBeast",
-        "operatingSystem": "iOS, Android",
-        "applicationCategory": "GameApplication",
-        "description": "A monster-raising RPG where real habits power a dig out of a boss-filled silo and earn battle moves for PvP against rivals.",
-        "image": "https://socialsin.com/og-image.jpg",
-        "url": "https://socialsin.com/",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "author": { "@type": "Organization", "name": "Social Sin LLC", "url": "https://socialsin.com/" },
-        "sameAs": [
-          "https://apps.apple.com/us/app/habit-beast-monster-trainer/id6760268226",
-          "https://play.google.com/store/apps/details?id=com.socialsin.habitbeast"
+        "@graph": [
+          {
+            "@type": "MobileApplication",
+            "@id": "https://socialsin.com/#app",
+            "name": "Habit Beast",
+            "alternateName": ["HabitBeast", "Habit Beast: Monster Habit RPG"],
+            "operatingSystem": "iOS, Android",
+            "applicationCategory": "GameApplication",
+            "applicationSubCategory": "Role-playing game",
+            "inLanguage": "en",
+            "description": "A monster-raising RPG and gamified habit tracker. Real habits power a dig out of a boss-filled silo and earn battle moves for PvP against rivals.",
+            "featureList": [
+              "60+ habits across six stats, each with up to five tiers",
+              "The Dig: tunnel out of a pitch-black silo past termites and buried bosses",
+              "Turn-based PvP card battles against real players and bots",
+              "D20 random encounters and habit bounties",
+              "Voice dictation for to-dos and hands-free habit timer commands",
+              "Nine hand-drawn monsters and six classes",
+              "No ads"
+            ],
+            "image": "https://socialsin.com/og-image.jpg",
+            "screenshot": [
+              "https://socialsin.com/img/monster-happy-800.webp",
+              "https://socialsin.com/img/arsenal-attack-800.webp",
+              "https://socialsin.com/img/rivals-leaderboard-800.webp",
+              "https://socialsin.com/img/habit-history-800.webp"
+            ],
+            "url": "https://socialsin.com/",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "author": { "@id": "https://socialsin.com/#org" },
+            "publisher": { "@id": "https://socialsin.com/#org" },
+            "sameAs": [
+              "https://apps.apple.com/us/app/habit-beast-monster-trainer/id6760268226",
+              "https://play.google.com/store/apps/details?id=com.socialsin.habitbeast"
+            ]
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://socialsin.com/#org",
+            "name": "Social Sin LLC",
+            "url": "https://socialsin.com/",
+            "logo": "https://socialsin.com/icon-512.png"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://socialsin.com/#website",
+            "name": "Habit Beast",
+            "url": "https://socialsin.com/",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://socialsin.com/#org" }
+          },
+          {
+            "@type": "VideoObject",
+            "name": "Habit Beast gameplay: log a habit, dig out of the silo, win a battle",
+            "description": "A habit timer logs a run, then the monster digs through the silo, meets a boss swarm and wins a battle.",
+            "thumbnailUrl": "https://socialsin.com/img/dig-demo-poster.jpg",
+            "contentUrl": "https://socialsin.com/DigDemo.mp4",
+            "uploadDate": "2026-10-15",
+            "duration": "PT30S",
+            "publisher": { "@id": "https://socialsin.com/#org" }
+          }
         ]
       }
     </script>
