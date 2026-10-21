@@ -390,11 +390,7 @@ export default function App() {
 
       <footer className="site-footer">
         <p>© {new Date().getFullYear()} Social Sin LLC. All rights reserved.</p>
-        <a
-          href="https://mschneider247.github.io/socialsinllc-habitbeast/"
-          target="_blank"
-          rel="privacy-policy noopener noreferrer"
-        >
+        <a href="/privacy/" rel="privacy-policy">
           Privacy Policy
         </a>
       </footer>
