@@ -105,7 +105,7 @@
     <a class="site-link" href="/">&larr; Habit Beast &middot; socialsin.com</a>
     <h1>HabitBeast Privacy Policy</h1>
     <p class="meta">
-      <strong>Last Updated:</strong> October 23, 2026 &nbsp;|&nbsp;
+      <strong>Last Updated:</strong> October 24, 2026 &nbsp;|&nbsp;
       <strong>Effective Date:</strong> February 24, 2026
     </p>
 
@@ -123,6 +123,8 @@
       <li><strong>Battle data</strong> — battle actions earned, challenge history, win/loss records</li>
       <li><strong>Reading data</strong> — titles and authors of books you log, finish, or rate</li>
       <li><strong>Lab TODO tasks</strong> — tasks you type or dictate on the Lab TODO board, stored privately so only you can see them</li>
+      <li><strong>Body profile</strong> (optional, only if you set up meal tracking) — age, sex, height, current and goal weight, activity level, and weight goal. Used only to calculate your calorie and macro targets, and never shown to other players.</li>
+      <li><strong>Food, water, and weight logs</strong> (optional) — the meals and foods you log, water intake, weigh-ins, and personal foods you create, stored privately so only you can see them. Foods you submit to the shared food library are shared with other players.</li>
     </ul>
 
     <h3>2b. Information Collected Automatically</h3>
@@ -171,6 +173,10 @@
         <td>Habit data, battle data</td>
       </tr>
       <tr>
+        <td>Meal tracking (calorie and macro targets, progress)</td>
+        <td>Body profile, food, water, and weight logs</td>
+      </tr>
+      <tr>
         <td>Showing your public profile and leaderboard rankings (see section 7)</td>
         <td>Monster name, level, appearance, game stats, public bookshelf</td>
       </tr>
@@ -180,11 +186,11 @@
       </tr>
       <tr>
         <td>Understanding how the app is used</td>
-        <td>Anonymized usage data</td>
+        <td>Usage data, tied to a random account ID</td>
       </tr>
       <tr>
         <td>Verifying and managing subscriptions</td>
-        <td>Anonymized app user ID, purchase receipt (via RevenueCat)</td>
+        <td>Random account ID, purchase receipt (via RevenueCat)</td>
       </tr>
       <tr>
         <td>Sending game notifications</td>
@@ -201,7 +207,7 @@
     <ul>
       <li>All data is stored in <strong>Firebase (Google Cloud)</strong> in the <code>us-central1</code> region</li>
       <li>Data is encrypted in transit (HTTPS/TLS) and at rest (Firebase default encryption)</li>
-      <li>Access to your data is controlled by Firebase Security Rules — your habits, habit logs, and Lab TODO tasks are readable only by you, a battle is visible only to the two players in it, and your public profile is visible to other signed-in players (see section 7)</li>
+      <li>Access to your data is controlled by Firebase Security Rules — your habits, habit logs, Lab TODO tasks, and food, water, and weight logs are readable only by you, a battle is visible only to the two players in it, and your public profile is visible to other signed-in players (see section 7)</li>
     </ul>
 
     <h2>5. Third-Party Services</h2>
@@ -264,7 +270,7 @@
       </tr>
     </table>
     <p>Firebase Analytics data is tied to a random account ID, not to your name or email address, and we use it only in aggregate to understand how the app is used.</p>
-    <p>RevenueCat receives your anonymized app user ID and purchase receipt data solely to verify and manage your subscription status. RevenueCat does not receive your payment details — those remain with Apple or Google.</p>
+    <p>RevenueCat receives the same random account ID (never your name or email address) and purchase receipt data solely to verify and manage your subscription status. RevenueCat does not receive your payment details — those remain with Apple or Google.</p>
 
     <h2>6. In-App Purchases and Subscriptions</h2>
     <p>HabitBeast offers optional paid subscriptions ("Beast Mode") and a one-time lifetime purchase ("Founding Beast") through the Apple App Store and Google Play Store.</p>

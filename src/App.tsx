@@ -89,7 +89,7 @@ const FEATURES = [
     label: 'Ze D20',
     title: 'Roll for Trouble',
     description:
-      'Every so often a twenty-sided die peeks into the lab. Roll it for one of twenty random encounters: a mimic that grows teeth, a surprise ambush, a brain swap, a wardrobe malfunction. Land a critical success and a bounty goes up on one of your habits, worth a brain slug if your monster finishes it within the hour.',
+      'Every so often a twenty-sided die peeks into the lab. Roll it for one of over two dozen random encounters: a mimic that grows teeth, a surprise ambush, a brain swap, a wardrobe malfunction. Land a critical success and a bounty goes up on one of your habits, worth a brain slug if your monster finishes it within the hour.',
   },
   {
     label: 'Hands-Free',
