@@ -4,6 +4,7 @@ import type { D20Handle } from './d20Scene'
 import { SPOTLIGHTS, pickFresh, rollHeadline } from './encounters'
 import type { Spotlight } from './encounters'
 import { emitLabEvent } from '../lab/events'
+import { rerollHeroLines } from '../lab/heroLines'
 import { D20_LOOKS, currentLab, labBackground, labPanel, otherLab, setLab } from '../lab/labs'
 import type { LabId } from '../lab/labs'
 import { ShowcaseMonster, layerUrl, monsterUrls } from './ShowcaseMonster'
@@ -18,8 +19,8 @@ import './dice.css'
  * across. It pops up a moment after the page loads. Each roll cranks the
  * chains (src/lab/AmbientLab) and moves the page to another lab (background,
  * colors, chains, panel skins, die skin) in a puff of steam while the die is
- * still a blur, lands, then opens a card with a random dressed monster and a
- * random corner of the app.
+ * still a blur, swaps the hero's two lines (src/lab/heroLines), lands, then
+ * opens a card with a random dressed monster and a random corner of the app.
  *
  * Everything heavy (three.js, the monster manifest) loads after the page
  * has, and nothing here is in the prerendered HTML.
@@ -168,6 +169,12 @@ export default function D20Dock({ links }: { links: { ios: string; android: stri
     const monster = pickFresh(showcase.monsters, last.current.monster)
     const background = showcase.backgrounds.length > 0 ? pickFresh(showcase.backgrounds, last.current.background) : null
     last.current = { spotlight, monster, background }
+    // For the site's analytics (public/analytics.js sends it as d20_roll).
+    window.dispatchEvent(
+      new CustomEvent('hb:d20-roll', {
+        detail: { face, lab, spotlight: spotlight.id, monster: monster?.species ?? null },
+      }),
+    )
     const cardSkin = labPanel(lab, 'large')
     const buttonSkin = labPanel(lab, 'small')
 
@@ -185,10 +192,12 @@ export default function D20Dock({ links }: { links: { ios: string; android: stri
     ])
     await Promise.all([Promise.race([preload, wait(PRELOAD_CAP_MS)]), wait(instant ? 0 : TUMBLE_MS / 2)])
 
-    // The lab changes while the die is still a blur, in a puff of steam.
+    // The lab changes while the die is still a blur, in a puff of steam, and
+    // the hero deals itself new lines.
     setFadeFrom({ lab: fromLab, key: Date.now() })
     setLab(lab)
     setFlatLab(lab)
+    rerollHeroLines(!still.current)
     const at = dieButtonRef.current?.getBoundingClientRect()
     if (at) emitLabEvent({ kind: 'steam', x: at.left + at.width / 2, y: at.top + at.height / 2 })
     await handle?.setLab(lab).catch(() => {})

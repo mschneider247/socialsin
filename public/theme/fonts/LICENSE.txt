@@ -1,0 +1,7 @@
+Fonts served from this folder (Latin subsets, as published on Google Fonts):
+
+- Rajdhani (400, 500, 600, 700), by the Indian Type Foundry
+- Playfair Display (700), by Claus Eggers Sørensen and the Playfair Display Project Authors
+
+Both are licensed under the SIL Open Font License, Version 1.1:
+https://openfontlicense.org/open-font-license-official-text/

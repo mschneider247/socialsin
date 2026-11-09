@@ -9,7 +9,7 @@
     <!-- Invite landing page: keep it out of search (a cold searcher wasn't
          challenged by anyone). Link previews still work. -->
     <meta name="robots" content="noindex, follow" />
-    <meta name="theme-color" content="#0a0d14" />
+    <meta name="theme-color" content="#120e08" />
     <link rel="icon" type="image/png" href="/icon-512.png" />
 
     <!-- Invite link previews. Bots don't run JS, so this stays generic;
@@ -28,23 +28,15 @@
     <meta name="twitter:image" content="https://socialsin.com/og-image.jpg" />
     <meta name="apple-itunes-app" content="app-id=6760268226" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+    <!-- The site's shared lab look: fonts, a random lab per visit, panel
+         skins (/theme/lab.css, /theme/lab.js). -->
+    <link rel="stylesheet" href="/theme/lab.css" />
+    <script src="/theme/lab.js"></script>
+    <link rel="preload" href="/theme/fonts/playfair-display-700.woff2" as="font" type="font/woff2" crossorigin />
     <!-- Google Analytics: invite_landing, store clicks, and invite campaign
          tags on the Google Play link (/analytics.js) -->
     <script src="/analytics.js"></script>
     <style>
-      :root {
-        --bg: #0a0d14;
-        --bg-card: #131720;
-        --teal: #00e5c8;
-        --gold: #f5a623;
-        --text: #dce4f0;
-        --text-muted: #6b7a99;
-        --border: rgba(0, 229, 200, 0.18);
-      }
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       body {
         min-height: 100vh;
         display: flex;
@@ -53,34 +45,53 @@
         padding: 24px 16px;
         background: var(--bg);
         color: var(--text);
-        font-family: 'Rajdhani', system-ui, sans-serif;
+        font-family: var(--font);
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
       }
+      /* A large (frameless) panel skin over the card's fill. */
       main {
         width: 100%;
         max-width: 440px;
         text-align: center;
-        background: var(--bg-card);
-        border: 1px solid var(--border);
+        padding: 26px 22px 24px;
         border-radius: 16px;
-        overflow: hidden;
+        border: 1px solid rgba(var(--accent-rgb), 0.35);
+        background: var(--skin-l2) center / cover no-repeat, var(--bg-card);
+        box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 40px rgba(var(--accent-rgb), 0.12);
       }
-      .hero { width: 100%; display: block; aspect-ratio: 1024 / 500; object-fit: cover; }
-      .body { padding: 24px 20px 28px; }
-      .eyebrow { color: var(--text-muted); font-weight: 700; letter-spacing: 0.2em; font-size: 0.8rem; }
-      h1 { font-size: 2rem; line-height: 1.1; letter-spacing: 0.04em; margin: 6px 0 10px; }
-      h1 .name { color: var(--gold); overflow-wrap: anywhere; }
+      .specimen { width: 168px; margin: 0 auto 18px; }
+      .specimen-caption {
+        margin-top: 8px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.25em;
+        color: var(--text-muted);
+      }
+      .specimen-caption [data-specimen-name]:not(:empty)::before { content: ' · '; }
+      .eyebrow { color: var(--accent-2); font-weight: 700; letter-spacing: 0.25em; font-size: 0.8rem; }
+      h1 {
+        font-family: var(--font-display);
+        font-size: 2.1rem;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        color: var(--accent);
+        margin: 6px 0 12px;
+      }
+      h1 .name { color: var(--accent-2); overflow-wrap: anywhere; }
       p { color: var(--text); font-size: 1.05rem; }
       .code {
         margin: 18px 0 22px;
         padding: 12px;
-        border: 1px dashed var(--border);
+        border: 1px dashed rgba(var(--accent-rgb), 0.35);
         border-radius: 10px;
+        background: rgba(var(--bg-rgb), 0.45);
         font-size: 0.95rem;
         color: var(--text-muted);
       }
-      .code strong { display: block; color: var(--teal); font-size: 1.4rem; letter-spacing: 0.08em; overflow-wrap: anywhere; }
+      .code strong { display: block; color: var(--accent); font-size: 1.4rem; letter-spacing: 0.08em; overflow-wrap: anywhere; }
+      /* Small (framed) panel skins, stretched edge to edge, never turned over:
+         the app's mark of something you tap. */
       .btn {
         display: block;
         padding: 14px;
@@ -89,19 +100,34 @@
         font-size: 1.05rem;
         letter-spacing: 0.06em;
         text-decoration: none;
-        border: 1px solid var(--teal);
-        color: var(--teal);
+        border: 1px solid rgba(var(--accent-rgb), 0.55);
+        color: var(--accent);
+        background: var(--skin-s3) 0 0 / 100% 100% no-repeat, rgba(var(--bg-rgb), 0.5);
         margin-top: 10px;
+        transition: filter 0.15s, transform 0.15s;
       }
-      .btn.primary { background: var(--teal); color: var(--bg); }
+      .btn.primary {
+        border-color: var(--accent);
+        color: var(--on-accent);
+        background: var(--skin-s1) 0 0 / 100% 100% no-repeat, var(--accent);
+      }
+      .btn:hover { filter: brightness(1.12); transform: translateY(-1px); }
+      .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
       .foot { margin-top: 18px; font-size: 0.85rem; color: var(--text-muted); }
       .foot a { color: var(--text-muted); }
       [hidden] { display: none !important; }
+      @media (prefers-reduced-motion: reduce) {
+        .btn { transition: none; }
+      }
     </style>
   </head>
   <body>
     <main>
-      <img class="hero" src="/og-image.jpg" alt="Hand-drawn Habit Beast monsters in the lab" />
+      <!-- A random dressed monster on a Closet background (/theme/specimen.js). -->
+      <div class="specimen" data-specimen-card>
+        <div class="specimen-stage" data-specimen data-backdrop></div>
+        <div class="specimen-caption">SPECIMEN<span data-specimen-name></span></div>
+      </div>
       <div class="body">
         <div class="eyebrow">HABIT BEAST</div>
         <h1 id="headline">You've been challenged</h1>
@@ -153,5 +179,6 @@
         }
       })();
     </script>
+    <script src="/theme/specimen.js" defer></script>
   </body>
 </html>

@@ -48,13 +48,13 @@ export const SPOTLIGHTS: Spotlight[] = [
   {
     id: 'history',
     title: 'HABIT LOG',
-    line: 'Sixty habits, up to five tiers each. Ze log remembers every day you showed up... and every day you did not.',
+    line: 'Over seventy habits, up to five tiers each. Ze log remembers every day you showed up... and every day you did not.',
     media: { kind: 'shot', name: 'habit-history', alt: 'A habit history calendar with every completed day marked' },
   },
   {
     id: 'rivals',
     title: 'RIVALS',
-    line: 'Real Doctors and lab-bred bots, all climbing ze board vhile you read zis.',
+    line: 'Only real Doctors on ze board, and it remembers every lab-bred bot zey have flattened.',
     media: { kind: 'shot', name: 'rivals-leaderboard', alt: 'The Rivals leaderboard' },
   },
   {

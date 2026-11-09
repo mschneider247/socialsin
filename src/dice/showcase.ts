@@ -15,10 +15,18 @@ let manifest: Promise<Showcase> | null = null
 
 /**
  * The pre-rolled showcase monsters and the Closet's backgrounds
- * (showcase.json, from `npm run sync:art`), fetched once and shared by the
- * D20's card and the monsters on the chains.
+ * (public/lab/showcase.json, from `npm run sync:art`), fetched once and
+ * shared by the D20's card and the monsters on the chains. The static pages
+ * read the same file (/theme/specimen.js).
  */
 export function loadShowcase(): Promise<Showcase> {
-  manifest ??= import('./showcase.json').then((m) => m.default as Showcase)
+  manifest ??= fetch('/lab/showcase.json').then((response) => {
+    if (!response.ok) throw new Error(`showcase.json: ${response.status}`)
+    return response.json() as Promise<Showcase>
+  })
+  // A failed fetch can be retried on the next roll.
+  manifest.catch(() => {
+    manifest = null
+  })
   return manifest
 }

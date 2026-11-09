@@ -10,7 +10,7 @@ const LINKS = {
 
 // The hero's two lines under the title. Every version is in the page and
 // index.html picks one of each per visit before first paint; App.css shows
-// it. Keep each list at index.html's HERO_LINES (6) and every tagline
+// it, and every roll of the D20 deals a new pair (src/lab/heroLines.ts). Keep each list at index.html's HERO_LINES (6) and every tagline
 // readable next to every subhead.
 const TAGLINES = [
   'Doctor! Train the monster. Dig your way out.',
@@ -25,9 +25,9 @@ const SUBHEADS = [
   'Your habits power the dig. Skip them and ze silo fights back.',
   'Every habit you finish becomes a battle move. Skip one and ze monster sulks.',
   'Skip a few days and ze termites get hungry, dahling.',
-  'Sixty habits, six stats, one very lazy monster.',
+  'Over seventy habits, six stats, one very lazy monster.',
   'Finish ze habit, earn ze move, flatten your rivals.',
-  'Ze lab is open. Ze monster is vaiting. Ze silo is very dark.',
+  'Ze lab is open, dahling. Ze monster is vaiting.',
 ]
 
 // Hero demo clip — swap the file in public/ and update this one path.
@@ -49,10 +49,10 @@ const FEATURES = [
       'Pick one of nine lovably out-of-shape creatures — then name it, dress it, and drag it into shape through daily habits. Your monster is hopeless without you.',
   },
   {
-    label: '60+ Habits',
+    label: '70+ Habits',
     title: 'Six Stats. Real Stakes.',
     description:
-      'Train across Exercise, Health, Clean, Community, Creativity, and Mental. 60+ habits with up to five tiers each — every completion earns XP and battle moves, and harder tiers unlock stronger ones.',
+      'Train across Exercise, Health, Clean, Community, Creativity, and Mental. 70+ habits with up to five tiers each — every completion earns XP and battle moves, and harder tiers unlock stronger ones.',
   },
   {
     label: 'Arsenal',

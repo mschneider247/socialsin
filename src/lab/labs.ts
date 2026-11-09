@@ -3,15 +3,16 @@ import type { D20TexCorners } from '../dice/d20Geometry'
 
 /**
  * The three lab styles from the app: Steam, Chem and Bio. A lab sets the
- * page's background, colors, panel skins and chains (index.css, keyed off
- * <html data-lab>) and the D20's skin. index.html picks one at random for
- * each visit and every roll of the die moves to another.
+ * page's background, colors, panel skins (/theme/lab.css) and chains
+ * (ambient.css), all keyed off <html data-lab>, and the D20's skin.
+ * /theme/lab.js picks one at random for each visit and every roll of the
+ * die moves to another.
  */
 export type LabId = 'steam' | 'chem' | 'bio'
 
 export const LAB_IDS: LabId[] = ['steam', 'chem', 'bio']
 
-/** Browser chrome color per lab (the app's backgroundDark); index.html sets the first. */
+/** Browser chrome color per lab (the app's backgroundDark); /theme/lab.js sets the first and has the same map. */
 const THEME_COLORS: Record<LabId, string> = { steam: '#120e08', chem: '#060a12', bio: '#0e1d0a' }
 
 export function currentLab(): LabId {

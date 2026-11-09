@@ -10,7 +10,10 @@
 // privacy policy describes all of this (/privacy/#website).
 //
 // Besides page views:
-//   store_click / discord_click  which button, and where on the page (placement)
+//   store_click / discord_click  which button, where on the page (placement),
+//                                and how many D20 rolls came before it (rolls)
+//   d20_roll                     a roll of the home page's die: roll (1st,
+//                                2nd…), face, lab, spotlight, monster
 //   invite_landing               someone opened an in-app invite (/get/?m=NAME)
 // A Google Play click also carries the visit's campaign tags (utm_*) into the
 // Play install referrer. The app's analytics then credits the install to its
@@ -115,6 +118,22 @@
     return 'page';
   }
 
+  // The home page's D20 (src/dice/D20Dock.tsx) announces each roll with an
+  // 'hb:d20-roll' event. Counting them lets a later store click say whether
+  // the visitor rolled first, and how much.
+  var rolls = 0;
+  window.addEventListener('hb:d20-roll', function (event) {
+    rolls += 1;
+    var roll = event.detail || {};
+    gtag('event', 'd20_roll', {
+      roll: rolls,
+      face: roll.face,
+      lab: roll.lab,
+      spotlight: roll.spotlight,
+      monster: roll.monster,
+    });
+  });
+
   // Capture phase, so the href is rewritten before the browser follows it.
   // That works for the React-rendered home page and the static pages alike.
   document.addEventListener('click', function (event) {
@@ -127,7 +146,7 @@
     if (!store) { return; }
     var placement = placementOf(link);
     if (store === 'discord') {
-      gtag('event', 'discord_click', { placement: placement });
+      gtag('event', 'discord_click', { placement: placement, rolls: rolls });
       return;
     }
     try {
@@ -136,6 +155,6 @@
     } catch (err) {
       // Leave the link as it was; the click itself must always work.
     }
-    gtag('event', 'store_click', { store: store, placement: placement });
+    gtag('event', 'store_click', { store: store, placement: placement, rolls: rolls });
   }, true);
 })();

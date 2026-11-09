@@ -4,8 +4,10 @@
 //   npm run sync:art                      (expects the app at ../habitBeast)
 //   HABITBEAST_DIR=/path/to/app npm run sync:art
 //
-// GitHub Pages builds only this repo, so the copies (public/lab/) and the
-// monster manifest (src/dice/showcase.json) are committed like any other file.
+// GitHub Pages builds only this repo, so the copies and the monster manifest
+// (all in public/lab/, showcase.json included) are committed like any other
+// file. Hand-written shared files live in public/theme/, which this leaves
+// alone.
 //
 // The monsters come from the app's own wardrobe tables: this loads the app's
 // clothing.ts / monsters.ts / classBundles.ts with an asset shim (every
@@ -246,7 +248,7 @@ try {
   // Not a git checkout; the manifest just says so.
 }
 writeFileSync(
-  path.join(root, 'src', 'dice', 'showcase.json'),
+  path.join(out, 'showcase.json'),
   `${JSON.stringify({ generatedFrom: `habitBeast@${commit}`, monsters: showcase, backgrounds }, null, 1)}\n`,
 )
 console.log(

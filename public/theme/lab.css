@@ -1,0 +1,188 @@
+/* The site's shared look, linked by every page (index.html, get/,
+   privacy/): self-hosted fonts, the app's three lab styles, the painted
+   lab background and the dressed-monster box (specimen.js on the static
+   pages, ShowcaseMonster.tsx on the home page).
+
+   The lab is picked per visit by /theme/lab.js (<html data-lab>), and the
+   home page's D20 moves to another on every roll. */
+
+/* ── Fonts ──
+   Served from socialsin.com rather than Google Fonts, so a visit sends no
+   one else the visitor's IP address. Both are under the SIL Open Font
+   License (fonts/LICENSE.txt). Latin subset only. */
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/theme/fonts/rajdhani-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/theme/fonts/rajdhani-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/theme/fonts/rajdhani-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/theme/fonts/rajdhani-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/theme/fonts/playfair-display-700.woff2') format('woff2');
+}
+
+/* ── Labs ──
+   Colors mirror COLORS / COLORS_CHEM / COLORS_BIO in the app's
+   src/constants/theme.ts. Panel skins are the app's painted lab textures
+   (PANEL_SKINS in src/constants/panelSkins.ts; files from
+   `npm run sync:art`): the framed s1–s4 go on things you tap, stretched edge
+   to edge and never turned over, since their top highlight is the lab's
+   light; the frameless l1–l4 go on cards, cropped to cover. */
+:root,
+:root[data-lab='steam'] {
+  --lab-bg: url('/lab/bg/steam.webp');
+  --bg: #120e08;
+  --bg-rgb: 18, 14, 8;
+  --bg-card: #2d2618;
+  --bg-card-rgb: 45, 38, 24;
+  --accent: #c8920c;
+  --accent-rgb: 200, 146, 12;
+  --accent-2: #b87333;
+  --accent-2-rgb: 184, 115, 51;
+  --text: #ead9b2;
+  --text-muted: #a08b68;
+  --text-muted-rgb: 160, 139, 104;
+  --on-accent: #120e08;
+  --skin-s1: url('/lab/panels/steam1.webp');
+  --skin-s2: url('/lab/panels/steam2.webp');
+  --skin-s3: url('/lab/panels/steam3.webp');
+  --skin-s4: url('/lab/panels/steam4.webp');
+  --skin-l1: url('/lab/panels/steam5.webp');
+  --skin-l2: url('/lab/panels/steam6.webp');
+  --skin-l3: url('/lab/panels/steam7.webp');
+  --skin-l4: url('/lab/panels/steam8.webp');
+}
+
+:root[data-lab='chem'] {
+  --lab-bg: url('/lab/bg/chem.webp');
+  --bg: #060a12;
+  --bg-rgb: 6, 10, 18;
+  --bg-card: #131d2a;
+  --bg-card-rgb: 19, 29, 42;
+  --accent: #2cb8b0;
+  --accent-rgb: 44, 184, 176;
+  --accent-2: #c49a3a;
+  --accent-2-rgb: 196, 154, 58;
+  --text: #b8d8dc;
+  /* The app's #4e7c8c, lifted so body copy stays readable on the web. */
+  --text-muted: #6f9aa8;
+  --text-muted-rgb: 111, 154, 168;
+  --on-accent: #060a12;
+  --skin-s1: url('/lab/panels/chem1.webp');
+  --skin-s2: url('/lab/panels/chem2.webp');
+  --skin-s3: url('/lab/panels/chem3.webp');
+  --skin-s4: url('/lab/panels/chem4.webp');
+  --skin-l1: url('/lab/panels/chem5.webp');
+  --skin-l2: url('/lab/panels/chem6.webp');
+  --skin-l3: url('/lab/panels/chem7.webp');
+  --skin-l4: url('/lab/panels/chem8.webp');
+}
+
+:root[data-lab='bio'] {
+  --lab-bg: url('/lab/bg/bio.webp');
+  --bg: #0e1d0a;
+  --bg-rgb: 14, 29, 10;
+  --bg-card: #1c3a13;
+  --bg-card-rgb: 28, 58, 19;
+  --accent: #9eb25d;
+  --accent-rgb: 158, 178, 93;
+  --accent-2: #ec4e20;
+  --accent-2-rgb: 236, 78, 32;
+  --text: #c7ccdb;
+  --text-muted: #8b8fa0;
+  --text-muted-rgb: 139, 143, 160;
+  --on-accent: #0e1d0a;
+  --skin-s1: url('/lab/panels/bio1.webp');
+  --skin-s2: url('/lab/panels/bio2.webp');
+  --skin-s3: url('/lab/panels/bio3.webp');
+  --skin-s4: url('/lab/panels/bio4.webp');
+  --skin-l1: url('/lab/panels/bio5.webp');
+  --skin-l2: url('/lab/panels/bio6.webp');
+  --skin-l3: url('/lab/panels/bio7.webp');
+  --skin-l4: url('/lab/panels/bio8.webp');
+}
+
+:root {
+  --accent-mid: rgba(var(--accent-rgb), 0.5);
+  --accent-dim: rgba(var(--accent-rgb), 0.1);
+  --accent-glow: rgba(var(--accent-rgb), 0.3);
+  --border: rgba(var(--accent-rgb), 0.18);
+  --font: 'Rajdhani', system-ui, sans-serif;
+  /* The app's display face (FONTS.display) for titles. */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --radius: 0.75rem;
+  color-scheme: dark;
+}
+
+/* The lab's painted background, pinned behind the page (a fixed layer, since
+   background-attachment: fixed doesn't hold on iOS). */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--bg) var(--lab-bg) center / cover no-repeat;
+  pointer-events: none;
+}
+
+/* ── A dressed monster ──
+   The app's StaticMonsterAvatar chip: dark fill, secondary border, corners
+   18% of the width, full-frame layers stacked inside. */
+.specimen-stage {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 18% / 13.5%;
+  background: rgba(var(--bg-rgb), 0.75);
+  border: 2px solid var(--accent-2);
+  overflow: hidden;
+}
+
+/* One of the app's Closet backgrounds, behind the monster. */
+.specimen-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.specimen-figure,
+.specimen-figure img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.specimen-figure img {
+  object-fit: contain;
+}

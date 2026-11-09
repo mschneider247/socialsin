@@ -248,37 +248,8 @@
   margin: 0;
 }
 
-/* Matches the app's StaticMonsterAvatar chip: dark fill, secondary border,
-   corners 18% of the width. */
-.specimen-stage {
-  position: relative;
-  aspect-ratio: 3 / 4;
-  border-radius: 18% / 13.5%;
-  background: rgba(var(--bg-rgb), 0.75);
-  border: 2px solid var(--accent-2);
-  overflow: hidden;
-}
-
-/* One of the app's Closet backgrounds, behind the monster. */
-.specimen-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.specimen-figure,
-.specimen-figure img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.specimen-figure img {
-  object-fit: contain;
-}
+/* .specimen-stage, .specimen-bg and .specimen-figure live in /theme/lab.css,
+   shared with the static pages. */
 
 .d20-card__specimen figcaption {
   display: flex;

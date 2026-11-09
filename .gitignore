@@ -3,3 +3,7 @@ habitbeast-architecture-v4.md
 
 # Prerender build output (SSR bundle used only at build time)
 dist-server/
+
+node_modules/
+dist/
+
