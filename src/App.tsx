@@ -83,7 +83,7 @@ const FEATURES = [
     label: 'Arsenal',
     title: 'Then Challenge Your Rivals',
     description:
-      'Build a loadout from hundreds of possible moves and take on real players and lab-bred bots. Lose a ranked battle and those moves are consumed — go earn them back.',
+      'Build a loadout from hundreds of possible moves and take on real players and lab-bred bots. Ranked battles burn the moves you use, win or lose — go earn them back.',
   },
   {
     label: 'Ze D20',
