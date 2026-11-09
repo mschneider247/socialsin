@@ -4,19 +4,105 @@
   padding: 0;
 }
 
+/* ── Labs ──
+   The app's three lab styles. index.html picks one per visit (<html data-lab>)
+   and every roll of the D20 moves to another (src/dice). Colors mirror
+   COLORS / COLORS_CHEM / COLORS_BIO in the app's src/constants/theme.ts. */
+:root,
+:root[data-lab='steam'] {
+  --lab-bg: url('/lab/bg/steam.webp');
+  --bg: #120e08;
+  --bg-rgb: 18, 14, 8;
+  --bg-card: #2d2618;
+  --accent: #c8920c;
+  --accent-rgb: 200, 146, 12;
+  --accent-2: #b87333;
+  --accent-2-rgb: 184, 115, 51;
+  --text: #ead9b2;
+  --text-muted: #a08b68;
+  --text-muted-rgb: 160, 139, 104;
+  --on-accent: #120e08;
+}
+
+:root[data-lab='chem'] {
+  --lab-bg: url('/lab/bg/chem.webp');
+  --bg: #060a12;
+  --bg-rgb: 6, 10, 18;
+  --bg-card: #131d2a;
+  --accent: #2cb8b0;
+  --accent-rgb: 44, 184, 176;
+  --accent-2: #c49a3a;
+  --accent-2-rgb: 196, 154, 58;
+  --text: #b8d8dc;
+  /* The app's #4e7c8c, lifted so body copy stays readable on the web. */
+  --text-muted: #6f9aa8;
+  --text-muted-rgb: 111, 154, 168;
+  --on-accent: #060a12;
+}
+
+:root[data-lab='bio'] {
+  --lab-bg: url('/lab/bg/bio.webp');
+  --bg: #0e1d0a;
+  --bg-rgb: 14, 29, 10;
+  --bg-card: #1c3a13;
+  --accent: #9eb25d;
+  --accent-rgb: 158, 178, 93;
+  --accent-2: #ec4e20;
+  --accent-2-rgb: 236, 78, 32;
+  --text: #c7ccdb;
+  --text-muted: #8b8fa0;
+  --text-muted-rgb: 139, 143, 160;
+  --on-accent: #0e1d0a;
+}
+
 :root {
-  --bg: #0a0d14;
-  --bg-card: #131720;
-  --teal: #00e5c8;
-  --teal-mid: rgba(0, 229, 200, 0.5);
-  --teal-dim: rgba(0, 229, 200, 0.1);
-  --teal-glow: rgba(0, 229, 200, 0.3);
-  --gold: #f5a623;
-  --text: #dce4f0;
-  --text-muted: #6b7a99;
-  --border: rgba(0, 229, 200, 0.18);
+  --accent-mid: rgba(var(--accent-rgb), 0.5);
+  --accent-dim: rgba(var(--accent-rgb), 0.1);
+  --accent-glow: rgba(var(--accent-rgb), 0.3);
+  --border: rgba(var(--accent-rgb), 0.18);
   --font: 'Rajdhani', system-ui, sans-serif;
+  /* The app's display face (FONTS.display) for titles. */
+  --font-display: 'Playfair Display', Georgia, serif;
   --radius: 0.75rem;
+}
+
+/* Panel skins: the app's painted lab textures (PANEL_SKINS in the app's
+   src/constants/panelSkins.ts; files from `npm run sync:art`). The framed
+   s1–s4 go on things you tap, stretched edge to edge and never turned over,
+   since their top highlight is the lab's light. The frameless l1–l4 go on
+   cards, cropped to cover. App.css hands them out by position. */
+:root,
+:root[data-lab='steam'] {
+  --skin-s1: url('/lab/panels/steam1.webp');
+  --skin-s2: url('/lab/panels/steam2.webp');
+  --skin-s3: url('/lab/panels/steam3.webp');
+  --skin-s4: url('/lab/panels/steam4.webp');
+  --skin-l1: url('/lab/panels/steam5.webp');
+  --skin-l2: url('/lab/panels/steam6.webp');
+  --skin-l3: url('/lab/panels/steam7.webp');
+  --skin-l4: url('/lab/panels/steam8.webp');
+}
+
+:root[data-lab='chem'] {
+  --skin-s1: url('/lab/panels/chem1.webp');
+  --skin-s2: url('/lab/panels/chem2.webp');
+  --skin-s3: url('/lab/panels/chem3.webp');
+  --skin-s4: url('/lab/panels/chem4.webp');
+  --skin-l1: url('/lab/panels/chem5.webp');
+  --skin-l2: url('/lab/panels/chem6.webp');
+  --skin-l3: url('/lab/panels/chem7.webp');
+  --skin-l4: url('/lab/panels/chem8.webp');
+}
+
+:root[data-lab='bio'] {
+  --skin-s1: url('/lab/panels/bio1.webp');
+  --skin-s2: url('/lab/panels/bio2.webp');
+  --skin-s3: url('/lab/panels/bio3.webp');
+  --skin-s4: url('/lab/panels/bio4.webp');
+  --skin-l1: url('/lab/panels/bio5.webp');
+  --skin-l2: url('/lab/panels/bio6.webp');
+  --skin-l3: url('/lab/panels/bio7.webp');
+  --skin-l4: url('/lab/panels/bio8.webp');
 }
 
 html {
@@ -30,6 +116,17 @@ body {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+/* The lab's painted background, pinned behind the page (a fixed layer, since
+   background-attachment: fixed doesn't hold on iOS). */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--bg) var(--lab-bg) center / cover no-repeat;
+  pointer-events: none;
 }
 
 a {

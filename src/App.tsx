@@ -1,59 +1,34 @@
-import { useEffect, useState } from 'react'
 import './App.css'
-
-// ── Hex background ──────────────────────────────────────────────────────────
-const HEX_SIZE = 50
-const HEX_W = HEX_SIZE * Math.sqrt(3)
-const HEX_H = HEX_SIZE * 2
-const VB_W = 2200
-const VB_H = 1400
-const COLS = Math.ceil(VB_W / HEX_W) + 2
-const ROWS = Math.ceil(VB_H / (HEX_H * 0.75)) + 2
-
-function hexPoints(cx: number, cy: number): string {
-  return Array.from({ length: 6 }, (_, i) => {
-    const angle = (Math.PI / 3) * i - Math.PI / 6
-    return `${(cx + HEX_SIZE * Math.cos(angle)).toFixed(1)},${(cy + HEX_SIZE * Math.sin(angle)).toFixed(1)}`
-  }).join(' ')
-}
-
-const HEX_GRID = Array.from({ length: COLS * ROWS }, (_, i) => {
-  const col = i % COLS
-  const row = Math.floor(i / COLS)
-  return {
-    id: `h${col}-${row}`,
-    points: hexPoints(col * HEX_W + (row % 2 ? HEX_W / 2 : 0), row * HEX_H * 0.75),
-    delay: `${(Math.random() * 12).toFixed(1)}s`,
-    duration: `${(6 + Math.random() * 8).toFixed(1)}s`,
-    gold: Math.random() < 0.04,
-  }
-})
-
-function HexBackground() {
-  return (
-    <svg
-      className="hex-bg"
-      viewBox={`0 0 ${VB_W} ${VB_H}`}
-      preserveAspectRatio="xMidYMid slice"
-      aria-hidden="true"
-    >
-      {HEX_GRID.map((cell) => (
-        <polygon
-          key={cell.id}
-          points={cell.points}
-          className={`hex-cell${cell.gold ? ' hex-cell--gold' : ''}`}
-          style={{ animationDelay: cell.delay, animationDuration: cell.duration }}
-        />
-      ))}
-    </svg>
-  )
-}
+import D20Dock from './dice/D20Dock'
+import AmbientLab from './lab/AmbientLab'
 
 const LINKS = {
   ios: 'https://apps.apple.com/us/app/habit-beast-monster-trainer/id6760268226',
   android: 'https://play.google.com/store/apps/details?id=com.socialsin.habitbeast',
   discord: 'https://discord.gg/4mQYnGkYw',
 }
+
+// The hero's two lines under the title. Every version is in the page and
+// index.html picks one of each per visit before first paint; App.css shows
+// it. Keep each list at index.html's HERO_LINES (6) and every tagline
+// readable next to every subhead.
+const TAGLINES = [
+  'Doctor! Train the monster. Dig your way out.',
+  'Doctor! Ze monster vill not train itself.',
+  'Train ze beast. Battle ze rivals. Escape ze lab.',
+  'Doctor! Your monster is out of shape. Fix it.',
+  'Do ze habit. Feed ze monster. Flee ze silo.',
+  'Doctor! Ze silo is dark and ze monster is soft.',
+]
+
+const SUBHEADS = [
+  'Your habits power the dig. Skip them and ze silo fights back.',
+  'Every habit you finish becomes a battle move. Skip one and ze monster sulks.',
+  'Skip a few days and ze termites get hungry, dahling.',
+  'Sixty habits, six stats, one very lazy monster.',
+  'Finish ze habit, earn ze move, flatten your rivals.',
+  'Ze lab is open. Ze monster is vaiting. Ze silo is very dark.',
+]
 
 // Hero demo clip — swap the file in public/ and update this one path.
 const DEMO_VIDEO = '/DigDemo.mp4'
@@ -136,14 +111,9 @@ const COMING_SOON = {
 }
 
 export default function App() {
-  // The hex grid is decorative and randomized per load, so it is left out of
-  // the prerendered HTML (scripts/prerender.mjs) and drawn once hydrated.
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => setMounted(true), [])
-
   return (
     <div className="app">
-      {mounted && <HexBackground />}
+      <AmbientLab />
       <header className="site-header">
         <span className="company-name">Social Sin LLC</span>
         <nav className="header-nav" aria-label="Download links">
@@ -171,8 +141,20 @@ export default function App() {
             <br />
             BEAST
           </h1>
-          <p className="tagline">Doctor! Train the monster. Dig your way out.</p>
-          <p className="hero-subheadline">Your habits power the dig. Skip them and ze silo fights back.</p>
+          <p className="tagline">
+            {TAGLINES.map((line, i) => (
+              <span key={i} className="hero-line" data-line={i}>
+                {line}
+              </span>
+            ))}
+          </p>
+          <p className="hero-subheadline">
+            {SUBHEADS.map((line, i) => (
+              <span key={i} className="hero-line" data-line={i}>
+                {line}
+              </span>
+            ))}
+          </p>
           <div className="hero-cta">
             <a
               href={LINKS.ios}
@@ -394,6 +376,8 @@ export default function App() {
           Privacy Policy
         </a>
       </footer>
+
+      <D20Dock links={LINKS} />
     </div>
   )
 }

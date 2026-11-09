@@ -6,7 +6,23 @@
     <title>Habit Beast: Monster Habit RPG for iOS & Android – Social Sin LLC</title>
     <meta name="description" content="A gamified habit tracker for brains that hate boring ones. Real habits power your monster's dig out of a boss-filled silo. Free on iOS and Android." />
     <link rel="canonical" href="https://socialsin.com/" />
-    <meta name="theme-color" content="#0a0d14" />
+    <meta name="theme-color" content="#120e08" />
+    <!-- Set before first paint, so nothing swaps once the page is up:
+         this visit's lab (Steam, Chem or Bio; every roll of the D20 moves to
+         another, src/lab/labs.ts) and which of the hero's lines it shows
+         (TAGLINES and SUBHEADS in src/App.tsx, HERO_LINES of each). -->
+    <script>
+      (function () {
+        var labs = { steam: '#120e08', chem: '#060a12', bio: '#0e1d0a' };
+        var lab = Object.keys(labs)[Math.floor(Math.random() * 3)];
+        var HERO_LINES = 6;
+        var root = document.documentElement;
+        root.setAttribute('data-lab', lab);
+        root.setAttribute('data-tagline', String(Math.floor(Math.random() * HERO_LINES)));
+        root.setAttribute('data-subhead', String(Math.floor(Math.random() * HERO_LINES)));
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', labs[lab]);
+      })();
+    </script>
     <link rel="icon" type="image/png" href="/icon-512.png" />
     <link rel="apple-touch-icon" href="/icon-512.png" />
 
@@ -102,7 +118,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- Google Analytics + store-link campaign tags (public/analytics.js) -->
     <script src="/analytics.js"></script>

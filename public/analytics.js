@@ -107,6 +107,7 @@
   // Where on the page a button sits. Matches App.tsx's sections on the home page.
   function placementOf(link) {
     if (page !== 'home') { return page; }
+    if (link.closest('.d20-card')) { return 'd20'; }
     if (link.closest('header')) { return 'header'; }
     if (link.closest('.hero')) { return 'hero'; }
     if (link.closest('.download-section')) { return 'download'; }

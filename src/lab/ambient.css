@@ -1,0 +1,114 @@
+/* ── Ambient lab (AmbientLab) ── */
+
+:root {
+  /* One chain link. The app draws 13dp links; wider screens get a bit more. */
+  --link: 18px;
+  /* A monster riding a chain, and a steam puff (3:4, like their art). */
+  --piece: 84px;
+  --puff: 260px;
+  --chain-ms: 3800ms;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --link: 13px;
+    --piece: 60px;
+    --puff: 200px;
+  }
+}
+
+/* Rope for Steam, chain for Chem, vine for Bio: one 4-link repeat per strip
+   (public/lab/chains, cut by `npm run sync:art`). */
+:root,
+:root[data-lab='steam'] {
+  --chain-art: url('/lab/chains/steam.webp');
+}
+
+:root[data-lab='chem'] {
+  --chain-art: url('/lab/chains/chem.webp');
+}
+
+:root[data-lab='bio'] {
+  --chain-art: url('/lab/chains/bio.webp');
+}
+
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ambient-chains {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+}
+
+.chain {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: var(--link);
+  overflow: hidden;
+}
+
+/* Two repeats of slack above and below, so a one-repeat scroll never shows
+   an end. */
+.chain-strip {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: calc(var(--link) * -8);
+  bottom: calc(var(--link) * -8);
+  background: var(--chain-art) 0 0 / var(--link) calc(var(--link) * 4) repeat-y;
+  animation: chain-down var(--chain-ms) linear infinite;
+  will-change: transform;
+}
+
+.chain-strip[data-dir='up'] {
+  animation-name: chain-up;
+}
+
+@keyframes chain-down {
+  to { transform: translateY(calc(var(--link) * 4)); }
+}
+
+@keyframes chain-up {
+  to { transform: translateY(calc(var(--link) * -4)); }
+}
+
+.drift-piece {
+  position: absolute;
+  top: 0;
+  width: var(--piece);
+  aspect-ratio: 3 / 4;
+  will-change: transform;
+}
+
+.steam-puff {
+  position: absolute;
+  width: var(--puff);
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+/* The 8 frames side by side, stepped through once (150ms a frame, as in the
+   app); the cloud fades itself out in the art. */
+.steam-puff__frames {
+  width: 800%;
+  height: 100%;
+  background: url('/lab/steam.webp') 0 0 / 100% 100% no-repeat;
+  animation: steam-puff 1.2s steps(8) forwards;
+}
+
+@keyframes steam-puff {
+  to { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chain-strip {
+    animation: none;
+  }
+}

@@ -1,0 +1,1332 @@
+{
+ "generatedFrom": "habitBeast@4369d16",
+ "monsters": [
+  {
+   "species": "Franky",
+   "wearing": [
+    "Olive Kicks",
+    "Construction Vest",
+    "Bell Bottoms",
+    "Elvis Cape"
+   ],
+   "layers": [
+    "clothing-half/Big/Paired/elvisCapeBottom.webp",
+    "monsters-half/Big/Arms/Frank/off.webp",
+    "monsters-half/Big/Arms/Frank/main.webp",
+    "monsters-half/frank.webp",
+    "clothing-half/Big/Base/red.webp",
+    "clothing-half/Big/oliveKicks.webp",
+    "clothing-half/Big/bellBottoms.webp",
+    "clothing-half/Big/constructionVest.webp",
+    "clothing-half/Big/Paired/elvisCapeTop.webp",
+    "monsters-half/Big/Mouths/excited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Frank/open.webp",
+    "partial": "monsters-half/Big/Eyes/Frank/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Frank/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Frank/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Frank/closed.webp"
+   }
+  },
+  {
+   "species": "Franky",
+   "wearing": [
+    "Red Cowboy Hat",
+    "Wild Wig",
+    "Kettle Bell",
+    "Green Beard"
+   ],
+   "layers": [
+    "clothing-half/Big/Class/wildWigBottom.webp",
+    "clothing-half/Big/Class/kettleBell.webp",
+    "monsters-half/Big/Arms/Frank/off.webp",
+    "monsters-half/Big/Arms/Frank/mainFist.webp",
+    "monsters-half/frank.webp",
+    "clothing-half/Big/Base/yellow.webp",
+    "clothing-half/Big/Class/wildWigTop.webp",
+    "clothing-half/Big/redCowboyHat.webp",
+    "clothing-half/Big/greenBeard.webp",
+    "monsters-half/Big/Mouths/excited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Frank/open.webp",
+    "partial": "monsters-half/Big/Eyes/Frank/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Frank/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Frank/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Frank/closed.webp"
+   }
+  },
+  {
+   "species": "Franky",
+   "wearing": [
+    "Hiking Boots",
+    "Light Blue Tank",
+    "Grey Overalls",
+    "Beach Bum"
+   ],
+   "layers": [
+    "clothing-half/Big/Paired/beachBumBottom.webp",
+    "monsters-half/Big/Arms/Frank/off.webp",
+    "monsters-half/Big/Arms/Frank/main.webp",
+    "monsters-half/frank.webp",
+    "clothing-half/Big/Base/tan.webp",
+    "clothing-half/Big/hikingBoots.webp",
+    "clothing-half/Big/greyOveralls.webp",
+    "clothing-half/Big/greyTank.webp",
+    "clothing-half/Big/Paired/beachBumTop.webp",
+    "monsters-half/Big/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Frank/open.webp",
+    "partial": "monsters-half/Big/Eyes/Frank/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Frank/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Frank/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Frank/closed.webp"
+   }
+  },
+  {
+   "species": "Franky",
+   "wearing": [
+    "Gold Roller Blades",
+    "Teal Propeller",
+    "Captain Suit",
+    "Cotton Candy"
+   ],
+   "layers": [
+    "clothing-half/Big/Class/cottonCandy.webp",
+    "monsters-half/Big/Arms/Frank/off.webp",
+    "monsters-half/Big/Arms/Frank/mainFist.webp",
+    "monsters-half/frank.webp",
+    "clothing-half/Big/goldRollerblades.webp",
+    "clothing-half/Big/siloCaptain.webp",
+    "clothing-half/Big/tealPropeller.webp",
+    "monsters-half/Big/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Frank/open.webp",
+    "partial": "monsters-half/Big/Eyes/Frank/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Frank/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Frank/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Frank/closed.webp"
+   }
+  },
+  {
+   "species": "Franky",
+   "wearing": [
+    "Gold Roller Blades",
+    "Construction Hat",
+    "Grey Overalls",
+    "Wild Wig",
+    "Hairy"
+   ],
+   "layers": [
+    "clothing-half/Big/Class/wildWigBottom.webp",
+    "monsters-half/Big/Arms/Frank/off.webp",
+    "monsters-half/Big/Arms/Frank/main.webp",
+    "monsters-half/frank.webp",
+    "clothing-half/Big/Base/pink.webp",
+    "clothing-half/Big/goldRollerblades.webp",
+    "clothing-half/Big/greyOveralls.webp",
+    "clothing-half/Big/Class/wildWigTop.webp",
+    "clothing-half/Big/constructionHat.webp",
+    "monsters-half/Big/Mouths/excited.webp",
+    "monsters-half/Big/Mustaches/hairyExcited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Frank/open.webp",
+    "partial": "monsters-half/Big/Eyes/Frank/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Frank/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Frank/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Frank/closed.webp"
+   }
+  },
+  {
+   "species": "Howe",
+   "wearing": [
+    "Yellow Umbrella",
+    "Battle Pants",
+    "Mesmerist's Cape",
+    "Wild Wig",
+    "Flute"
+   ],
+   "layers": [
+    "clothing-half/Big/Class/wildWigBottom.webp",
+    "clothing-half/Big/Class/mesmeristsCapeBottom.webp",
+    "clothing-half/Big/Class/flute.webp",
+    "monsters-half/Big/Arms/Wolf/off.webp",
+    "monsters-half/Big/Arms/Wolf/mainFist.webp",
+    "monsters-half/wolf.webp",
+    "clothing-half/Big/Base/skyBlue.webp",
+    "clothing-half/Big/battlePants.webp",
+    "clothing-half/Big/Class/mesmeristsCapeTop.webp",
+    "clothing-half/Big/Class/wildWigTop.webp",
+    "clothing-half/Big/yellowUmbrella.webp",
+    "monsters-half/Big/Mouths/redHappy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Wolf/open.webp",
+    "partial": "monsters-half/Big/Eyes/Wolf/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Wolf/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Wolf/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Wolf/closed.webp"
+   }
+  },
+  {
+   "species": "Howe",
+   "wearing": [
+    "Gold Roller Blades",
+    "Broken Crown",
+    "Running Pants",
+    "Wine Cape"
+   ],
+   "layers": [
+    "clothing-half/Big/Paired/wineCapeBottom.webp",
+    "monsters-half/Big/Arms/Wolf/off.webp",
+    "monsters-half/Big/Arms/Wolf/main.webp",
+    "monsters-half/wolf.webp",
+    "clothing-half/Big/goldRollerblades.webp",
+    "clothing-half/Big/runningPants.webp",
+    "clothing-half/Big/Paired/wineCapeTop.webp",
+    "clothing-half/Big/brokenCrown.webp",
+    "monsters-half/Big/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Wolf/open.webp",
+    "partial": "monsters-half/Big/Eyes/Wolf/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Wolf/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Wolf/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Wolf/closed.webp"
+   }
+  },
+  {
+   "species": "Howe",
+   "wearing": [
+    "Pink Pants",
+    "Grey Cape",
+    "Hairy"
+   ],
+   "layers": [
+    "clothing-half/Big/Paired/greyCapeBottom.webp",
+    "monsters-half/Big/Arms/Wolf/off.webp",
+    "monsters-half/Big/Arms/Wolf/main.webp",
+    "monsters-half/wolf.webp",
+    "clothing-half/Big/pinkPants.webp",
+    "clothing-half/Big/Paired/greyCapeTop.webp",
+    "monsters-half/Big/Mouths/happy.webp",
+    "monsters-half/Big/Mustaches/hairyHappy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Wolf/open.webp",
+    "partial": "monsters-half/Big/Eyes/Wolf/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Wolf/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Wolf/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Wolf/closed.webp"
+   }
+  },
+  {
+   "species": "Howe",
+   "wearing": [
+    "Red Kicks",
+    "Running Pants",
+    "Elvis Cape",
+    "Club",
+    "Green Beard"
+   ],
+   "layers": [
+    "clothing-half/Big/Paired/elvisCapeBottom.webp",
+    "clothing-half/Big/Class/club.webp",
+    "monsters-half/Big/Arms/Wolf/off.webp",
+    "monsters-half/Big/Arms/Wolf/mainFist.webp",
+    "monsters-half/wolf.webp",
+    "clothing-half/Big/Base/midnight.webp",
+    "clothing-half/Big/redKicks.webp",
+    "clothing-half/Big/runningPants.webp",
+    "clothing-half/Big/Paired/elvisCapeTop.webp",
+    "clothing-half/Big/greenBeard.webp",
+    "monsters-half/Big/Mouths/excited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Wolf/open.webp",
+    "partial": "monsters-half/Big/Eyes/Wolf/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Wolf/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Wolf/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Wolf/closed.webp"
+   }
+  },
+  {
+   "species": "Howe",
+   "wearing": [
+    "Gold Roller Blades",
+    "Nail Club",
+    "Green Beard"
+   ],
+   "layers": [
+    "clothing-half/Big/Class/nailClub.webp",
+    "monsters-half/Big/Arms/Wolf/off.webp",
+    "monsters-half/Big/Arms/Wolf/mainFist.webp",
+    "monsters-half/wolf.webp",
+    "clothing-half/Big/Base/grey.webp",
+    "clothing-half/Big/goldRollerblades.webp",
+    "clothing-half/Big/greenBeard.webp",
+    "monsters-half/Big/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Wolf/open.webp",
+    "partial": "monsters-half/Big/Eyes/Wolf/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Wolf/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Wolf/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Wolf/closed.webp"
+   }
+  },
+  {
+   "species": "Wrapps",
+   "wearing": [
+    "Red Skate Board",
+    "Grey Wizard Hat",
+    "Battle Pants",
+    "Mesmerist's Cape",
+    "Wild Wig",
+    "Lettuce"
+   ],
+   "layers": [
+    "clothing-half/Bottom/redSkateboard.webp",
+    "clothing-half/Small/Class/wildWigBottom.webp",
+    "clothing-half/Small/Class/mesmeristsCapeBottom.webp",
+    "clothing-half/Small/Class/lettuce.webp",
+    "monsters-half/Small/Arms/Wrapps/off.webp",
+    "monsters-half/Small/Arms/Wrapps/mainFist.webp",
+    "monsters-half/wrapps.webp",
+    "clothing-half/Small/Base/pink.webp",
+    "clothing-half/Small/battlePants.webp",
+    "clothing-half/Small/Class/mesmeristsCapeTop.webp",
+    "clothing-half/Small/Class/wildWigTop.webp",
+    "clothing-half/Small/greyWizardHat.webp",
+    "monsters-half/Small/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Wrapps/open.webp",
+    "partial": "monsters-half/Small/Eyes/Wrapps/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Wrapps/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Wrapps/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Wrapps/closed.webp"
+   }
+  },
+  {
+   "species": "Wrapps",
+   "wearing": [
+    "Black Slippas",
+    "Red Cowboy Hat",
+    "Beach Bum"
+   ],
+   "layers": [
+    "clothing-half/Small/Paired/beachBumBottom.webp",
+    "monsters-half/Small/Arms/Wrapps/off.webp",
+    "monsters-half/Small/Arms/Wrapps/main.webp",
+    "monsters-half/wrapps.webp",
+    "clothing-half/Small/Base/storm.webp",
+    "clothing-half/Small/blackSlippas.webp",
+    "clothing-half/Small/Paired/beachBumTop.webp",
+    "clothing-half/Small/redCowboyHat.webp",
+    "monsters-half/Small/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Wrapps/open.webp",
+    "partial": "monsters-half/Small/Eyes/Wrapps/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Wrapps/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Wrapps/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Wrapps/closed.webp"
+   }
+  },
+  {
+   "species": "Wrapps",
+   "wearing": [
+    "Blue Skateboard",
+    "Orange Cap",
+    "Wild Wig"
+   ],
+   "layers": [
+    "clothing-half/Bottom/blueSkateboard.webp",
+    "clothing-half/Small/Class/wildWigBottom.webp",
+    "monsters-half/Small/Arms/Wrapps/off.webp",
+    "monsters-half/Small/Arms/Wrapps/main.webp",
+    "monsters-half/wrapps.webp",
+    "clothing-half/Small/Base/grey.webp",
+    "clothing-half/Small/Class/wildWigTop.webp",
+    "clothing-half/Small/orangeCap.webp",
+    "monsters-half/Small/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Wrapps/open.webp",
+    "partial": "monsters-half/Small/Eyes/Wrapps/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Wrapps/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Wrapps/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Wrapps/closed.webp"
+   }
+  },
+  {
+   "species": "Wrapps",
+   "wearing": [
+    "Gold Roller Blades",
+    "Green Wizard Hat",
+    "Mesmerist's Cape"
+   ],
+   "layers": [
+    "clothing-half/Small/Class/mesmeristsCapeBottom.webp",
+    "monsters-half/Small/Arms/Wrapps/off.webp",
+    "monsters-half/Small/Arms/Wrapps/main.webp",
+    "monsters-half/wrapps.webp",
+    "clothing-half/Small/Base/yellow.webp",
+    "clothing-half/Small/goldRollerblades.webp",
+    "clothing-half/Small/Class/mesmeristsCapeTop.webp",
+    "clothing-half/Small/greenWizardHat.webp",
+    "monsters-half/Small/Mouths/excited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Wrapps/open.webp",
+    "partial": "monsters-half/Small/Eyes/Wrapps/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Wrapps/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Wrapps/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Wrapps/closed.webp"
+   }
+  },
+  {
+   "species": "Wrapps",
+   "wearing": [
+    "Red Roller Blades",
+    "Blue Cowboy Hat",
+    "Purple Pants",
+    "Beach Bum",
+    "Cotton Candy"
+   ],
+   "layers": [
+    "clothing-half/Small/Paired/beachBumBottom.webp",
+    "clothing-half/Small/Class/cottonCandy.webp",
+    "monsters-half/Small/Arms/Wrapps/off.webp",
+    "monsters-half/Small/Arms/Wrapps/mainFist.webp",
+    "monsters-half/wrapps.webp",
+    "clothing-half/Small/Base/sage.webp",
+    "clothing-half/Small/redRollerblades.webp",
+    "clothing-half/Small/purplePants.webp",
+    "clothing-half/Small/Paired/beachBumTop.webp",
+    "clothing-half/Small/blueCowboyHat.webp",
+    "monsters-half/Small/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Wrapps/open.webp",
+    "partial": "monsters-half/Small/Eyes/Wrapps/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Wrapps/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Wrapps/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Wrapps/closed.webp"
+   }
+  },
+  {
+   "species": "Stumbles",
+   "wearing": [
+    "Red Roller Blades",
+    "Teal Propeller",
+    "Battle Pants",
+    "Elvis Cape",
+    "Wild Wig",
+    "Chin Strap"
+   ],
+   "layers": [
+    "clothing-half/Small/Class/wildWigBottom.webp",
+    "clothing-half/Small/Paired/elvisCapeBottom.webp",
+    "monsters-half/Small/Arms/Stumbles/off.webp",
+    "monsters-half/Small/Arms/Stumbles/main.webp",
+    "monsters-half/stumbles.webp",
+    "clothing-half/Small/Base/skyBlue.webp",
+    "clothing-half/Small/redRollerblades.webp",
+    "clothing-half/Small/battlePants.webp",
+    "clothing-half/Small/Paired/elvisCapeTop.webp",
+    "clothing-half/Small/Class/wildWigTop.webp",
+    "clothing-half/Small/tealPropeller.webp",
+    "clothing-half/Small/chinStrap.webp",
+    "monsters-half/Small/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Stumbles/open.webp",
+    "partial": "monsters-half/Small/Eyes/Stumbles/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Stumbles/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Stumbles/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Stumbles/closed.webp"
+   }
+  },
+  {
+   "species": "Stumbles",
+   "wearing": [
+    "Teal Slippas",
+    "Green Wizard Hat",
+    "Green Sash",
+    "Wild Wig"
+   ],
+   "layers": [
+    "clothing-half/Small/Class/wildWigBottom.webp",
+    "monsters-half/Small/Arms/Stumbles/off.webp",
+    "monsters-half/Small/Arms/Stumbles/main.webp",
+    "monsters-half/stumbles.webp",
+    "clothing-half/Small/tealSlippas.webp",
+    "clothing-half/Small/greenSash.webp",
+    "clothing-half/Small/Class/wildWigTop.webp",
+    "clothing-half/Small/greenWizardHat.webp",
+    "monsters-half/Small/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Stumbles/open.webp",
+    "partial": "monsters-half/Small/Eyes/Stumbles/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Stumbles/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Stumbles/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Stumbles/closed.webp"
+   }
+  },
+  {
+   "species": "Stumbles",
+   "wearing": [
+    "Olive Kicks",
+    "Hoverboard",
+    "Paint Splatter Overalls",
+    "Battle Cape",
+    "Beach Bum"
+   ],
+   "layers": [
+    "clothing-half/Bottom/hoverboard.webp",
+    "clothing-half/Small/Paired/beachBumBottom.webp",
+    "clothing-half/Small/Paired/battleCapeBottom.webp",
+    "monsters-half/Small/Arms/Stumbles/off.webp",
+    "monsters-half/Small/Arms/Stumbles/main.webp",
+    "monsters-half/stumbles.webp",
+    "clothing-half/Small/Base/yellow.webp",
+    "clothing-half/Small/oliveKicks.webp",
+    "clothing-half/Small/paintSplatterOveralls.webp",
+    "clothing-half/Small/Paired/battleCapeTop.webp",
+    "clothing-half/Small/Paired/beachBumTop.webp",
+    "monsters-half/Small/Mouths/excited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Stumbles/open.webp",
+    "partial": "monsters-half/Small/Eyes/Stumbles/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Stumbles/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Stumbles/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Stumbles/closed.webp"
+   }
+  },
+  {
+   "species": "Stumbles",
+   "wearing": [
+    "Hoverboard",
+    "Purple Vest",
+    "Blue Trunks",
+    "Galvanic Screw",
+    "Wild Wig",
+    "Green Beard"
+   ],
+   "layers": [
+    "clothing-half/Bottom/hoverboard.webp",
+    "clothing-half/Small/Class/wildWigBottom.webp",
+    "clothing-half/Small/Class/galvanicScrewBottom.webp",
+    "monsters-half/Small/Arms/Stumbles/off.webp",
+    "monsters-half/Small/Arms/Stumbles/main.webp",
+    "monsters-half/stumbles.webp",
+    "clothing-half/Small/Base/tan.webp",
+    "clothing-half/Small/blueTrunks.webp",
+    "clothing-half/Small/purpleVest.webp",
+    "clothing-half/Small/Class/galvanicScrewTop.webp",
+    "clothing-half/Small/Class/wildWigTop.webp",
+    "clothing-half/Small/greenBeard.webp",
+    "monsters-half/Small/Mouths/redExcited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Stumbles/open.webp",
+    "partial": "monsters-half/Small/Eyes/Stumbles/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Stumbles/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Stumbles/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Stumbles/closed.webp"
+   }
+  },
+  {
+   "species": "Stumbles",
+   "wearing": [
+    "Wild Wig"
+   ],
+   "layers": [
+    "clothing-half/Small/Class/wildWigBottom.webp",
+    "monsters-half/Small/Arms/Stumbles/off.webp",
+    "monsters-half/Small/Arms/Stumbles/main.webp",
+    "monsters-half/stumbles.webp",
+    "clothing-half/Small/Base/banana.webp",
+    "clothing-half/Small/Class/wildWigTop.webp",
+    "monsters-half/Small/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Stumbles/open.webp",
+    "partial": "monsters-half/Small/Eyes/Stumbles/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Stumbles/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Stumbles/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Stumbles/closed.webp"
+   }
+  },
+  {
+   "species": "Murk",
+   "wearing": [
+    "Black Slippas",
+    "Hoverboard",
+    "Red Propeller",
+    "Elvis Pants",
+    "Wine Cape",
+    "Wild Wig",
+    "Bullhorn"
+   ],
+   "layers": [
+    "clothing-half/Bottom/hoverboard.webp",
+    "clothing-half/Big/Class/wildWigBottom.webp",
+    "clothing-half/Big/Paired/wineCapeBottom.webp",
+    "clothing-half/Big/Class/bullhorn.webp",
+    "monsters-half/Big/Arms/Murk/off.webp",
+    "monsters-half/Big/Arms/Murk/mainFist.webp",
+    "monsters-half/murk.webp",
+    "clothing-half/Big/Base/pink.webp",
+    "clothing-half/Big/blackSlippas.webp",
+    "clothing-half/Big/elvisPants.webp",
+    "clothing-half/Big/Paired/wineCapeTop.webp",
+    "clothing-half/Big/Class/wildWigTop.webp",
+    "clothing-half/Big/redPropeller.webp",
+    "monsters-half/Big/Mouths/excited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Murk/open.webp",
+    "partial": "monsters-half/Big/Eyes/Murk/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Murk/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Murk/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Murk/closed.webp"
+   }
+  },
+  {
+   "species": "Murk",
+   "wearing": [
+    "Olive Kicks",
+    "Grey Wizard Hat",
+    "Red Tank",
+    "Wild Wig"
+   ],
+   "layers": [
+    "clothing-half/Big/Class/wildWigBottom.webp",
+    "monsters-half/Big/Arms/Murk/off.webp",
+    "monsters-half/Big/Arms/Murk/main.webp",
+    "monsters-half/murk.webp",
+    "clothing-half/Big/oliveKicks.webp",
+    "clothing-half/Big/redTank.webp",
+    "clothing-half/Big/Class/wildWigTop.webp",
+    "clothing-half/Big/greyWizardHat.webp",
+    "monsters-half/Big/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Murk/open.webp",
+    "partial": "monsters-half/Big/Eyes/Murk/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Murk/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Murk/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Murk/closed.webp"
+   }
+  },
+  {
+   "species": "Murk",
+   "wearing": [
+    "Nightmare Suit",
+    "Paint Splatter Overalls",
+    "Black Cape",
+    "Green Wig",
+    "Hairy"
+   ],
+   "layers": [
+    "clothing-half/Big/Paired/greenWigBottom.webp",
+    "clothing-half/Big/Paired/blackCapeBottom.webp",
+    "monsters-half/Big/Arms/Murk/off.webp",
+    "monsters-half/Big/Arms/Murk/main.webp",
+    "monsters-half/murk.webp",
+    "clothing-half/Big/Base/grey.webp",
+    "clothing-half/Big/paintSplatterOveralls.webp",
+    "clothing-half/Big/siloNightmare.webp",
+    "clothing-half/Big/Paired/blackCapeTop.webp",
+    "clothing-half/Big/Paired/greenWigTop.webp",
+    "monsters-half/Big/Mouths/excited.webp",
+    "monsters-half/Big/Mustaches/hairyExcited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Murk/open.webp",
+    "partial": "monsters-half/Big/Eyes/Murk/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Murk/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Murk/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Murk/closed.webp"
+   }
+  },
+  {
+   "species": "Murk",
+   "wearing": [
+    "Olive Kicks",
+    "Grey Cape",
+    "Beach Bum",
+    "Pinwheel",
+    "Green Beard"
+   ],
+   "layers": [
+    "clothing-half/Big/Paired/beachBumBottom.webp",
+    "clothing-half/Big/Paired/greyCapeBottom.webp",
+    "clothing-half/Big/Class/pinwheel.webp",
+    "monsters-half/Big/Arms/Murk/off.webp",
+    "monsters-half/Big/Arms/Murk/mainFist.webp",
+    "monsters-half/murk.webp",
+    "clothing-half/Big/Base/grey.webp",
+    "clothing-half/Big/oliveKicks.webp",
+    "clothing-half/Big/Paired/greyCapeTop.webp",
+    "clothing-half/Big/Paired/beachBumTop.webp",
+    "clothing-half/Big/greenBeard.webp",
+    "monsters-half/Big/Mouths/prettyExcited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Murk/open.webp",
+    "partial": "monsters-half/Big/Eyes/Murk/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Murk/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Murk/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Murk/closed.webp"
+   }
+  },
+  {
+   "species": "Murk",
+   "wearing": [
+    "Ice Hot Board",
+    "Broken Crown",
+    "Black Cape",
+    "Pencil",
+    "Hairy"
+   ],
+   "layers": [
+    "clothing-half/Bottom/iceHotBoard.webp",
+    "clothing-half/Big/Paired/blackCapeBottom.webp",
+    "clothing-half/Big/Class/pencil.webp",
+    "monsters-half/Big/Arms/Murk/off.webp",
+    "monsters-half/Big/Arms/Murk/mainFist.webp",
+    "monsters-half/murk.webp",
+    "clothing-half/Big/Base/red.webp",
+    "clothing-half/Big/Paired/blackCapeTop.webp",
+    "clothing-half/Big/brokenCrown.webp",
+    "monsters-half/Big/Mouths/prettyHappy.webp",
+    "monsters-half/Big/Mustaches/hairyHappy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Murk/open.webp",
+    "partial": "monsters-half/Big/Eyes/Murk/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Murk/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Murk/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Murk/closed.webp"
+   }
+  },
+  {
+   "species": "Iggy",
+   "wearing": [
+    "Baseball Cap",
+    "Pink Nail",
+    "Black Slacks",
+    "Black Cape",
+    "Beach Bum",
+    "Nail Club"
+   ],
+   "layers": [
+    "clothing-half/Small/Paired/beachBumBottom.webp",
+    "clothing-half/Small/Paired/blackCapeBottom.webp",
+    "clothing-half/Small/Class/nailClub.webp",
+    "monsters-half/Small/Arms/Iggs/off.webp",
+    "monsters-half/Small/Arms/Iggs/mainFist.webp",
+    "monsters-half/iggs.webp",
+    "clothing-half/Small/Base/pink.webp",
+    "clothing-half/Small/blackSlacks.webp",
+    "clothing-half/Small/pinkNail.webp",
+    "clothing-half/Small/Paired/blackCapeTop.webp",
+    "clothing-half/Small/Paired/beachBumTop.webp",
+    "clothing-half/Small/baseballCap.webp",
+    "monsters-half/Small/Mouths/prettyExcited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Iggs/open.webp",
+    "partial": "monsters-half/Small/Eyes/Iggs/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Iggs/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Iggs/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Iggs/closed.webp"
+   }
+  },
+  {
+   "species": "Iggy",
+   "wearing": [
+    "Olive Kicks",
+    "Purple Pants",
+    "Forest Cape",
+    "Beach Bum"
+   ],
+   "layers": [
+    "clothing-half/Small/Paired/beachBumBottom.webp",
+    "clothing-half/Small/Paired/forestCapeBottom.webp",
+    "monsters-half/Small/Arms/Iggs/off.webp",
+    "monsters-half/Small/Arms/Iggs/main.webp",
+    "monsters-half/iggs.webp",
+    "clothing-half/Small/Base/skyBlue.webp",
+    "clothing-half/Small/oliveKicks.webp",
+    "clothing-half/Small/purplePants.webp",
+    "clothing-half/Small/Paired/forestCapeTop.webp",
+    "clothing-half/Small/Paired/beachBumTop.webp",
+    "monsters-half/Small/Mouths/excited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Iggs/open.webp",
+    "partial": "monsters-half/Small/Eyes/Iggs/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Iggs/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Iggs/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Iggs/closed.webp"
+   }
+  },
+  {
+   "species": "Iggy",
+   "wearing": [
+    "Hiking Boots",
+    "Elvis Cape",
+    "Elvis Wig",
+    "Nail Club"
+   ],
+   "layers": [
+    "clothing-half/Small/Paired/elvisWigBottom.webp",
+    "clothing-half/Small/Paired/elvisCapeBottom.webp",
+    "clothing-half/Small/Class/nailClub.webp",
+    "monsters-half/Small/Arms/Iggs/off.webp",
+    "monsters-half/Small/Arms/Iggs/mainFist.webp",
+    "monsters-half/iggs.webp",
+    "clothing-half/Small/hikingBoots.webp",
+    "clothing-half/Small/Paired/elvisCapeTop.webp",
+    "clothing-half/Small/Paired/elvisWigTop.webp",
+    "monsters-half/Small/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Iggs/open.webp",
+    "partial": "monsters-half/Small/Eyes/Iggs/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Iggs/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Iggs/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Iggs/closed.webp"
+   }
+  },
+  {
+   "species": "Iggy",
+   "wearing": [
+    "Black Slippas",
+    "Red Cowboy Hat",
+    "Wine Cape",
+    "Elvis Wig",
+    "Club"
+   ],
+   "layers": [
+    "clothing-half/Small/Paired/elvisWigBottom.webp",
+    "clothing-half/Small/Paired/wineCapeBottom.webp",
+    "clothing-half/Small/Class/club.webp",
+    "monsters-half/Small/Arms/Iggs/off.webp",
+    "monsters-half/Small/Arms/Iggs/mainFist.webp",
+    "monsters-half/iggs.webp",
+    "clothing-half/Small/Base/storm.webp",
+    "clothing-half/Small/blackSlippas.webp",
+    "clothing-half/Small/Paired/wineCapeTop.webp",
+    "clothing-half/Small/Paired/elvisWigTop.webp",
+    "clothing-half/Small/redCowboyHat.webp",
+    "monsters-half/Small/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Iggs/open.webp",
+    "partial": "monsters-half/Small/Eyes/Iggs/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Iggs/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Iggs/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Iggs/closed.webp"
+   }
+  },
+  {
+   "species": "Iggy",
+   "wearing": [
+    "White Slippas",
+    "Purple Trunks",
+    "Chin Strap"
+   ],
+   "layers": [
+    "monsters-half/Small/Arms/Iggs/off.webp",
+    "monsters-half/Small/Arms/Iggs/main.webp",
+    "monsters-half/iggs.webp",
+    "clothing-half/Small/Base/sage.webp",
+    "clothing-half/Small/whiteSlippas.webp",
+    "clothing-half/Small/purpleTrunks.webp",
+    "clothing-half/Small/chinStrap.webp",
+    "monsters-half/Small/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Iggs/open.webp",
+    "partial": "monsters-half/Small/Eyes/Iggs/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Iggs/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Iggs/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Iggs/closed.webp"
+   }
+  },
+  {
+   "species": "Biggs",
+   "wearing": [
+    "Blue Vest",
+    "Chin Strap"
+   ],
+   "layers": [
+    "monsters-half/Big/Arms/Biggs/off.webp",
+    "monsters-half/Big/Arms/Biggs/main.webp",
+    "monsters-half/biggs.webp",
+    "clothing-half/Big/blueVest.webp",
+    "clothing-half/Big/chinStrap.webp",
+    "monsters-half/Big/Mouths/prettyHappy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Biggs/open.webp",
+    "partial": "monsters-half/Big/Eyes/Biggs/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Biggs/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Biggs/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Biggs/closed.webp"
+   }
+  },
+  {
+   "species": "Biggs",
+   "wearing": [
+    "Olive Kicks",
+    "Grey Wizard Hat",
+    "Pressed White",
+    "Elvis Cape",
+    "Green Wig"
+   ],
+   "layers": [
+    "clothing-half/Big/Paired/greenWigBottom.webp",
+    "clothing-half/Big/Paired/elvisCapeBottom.webp",
+    "monsters-half/Big/Arms/Biggs/off.webp",
+    "monsters-half/Big/Arms/Biggs/main.webp",
+    "monsters-half/biggs.webp",
+    "clothing-half/Big/Base/grey.webp",
+    "clothing-half/Big/oliveKicks.webp",
+    "clothing-half/Big/Class/pressedWhite.webp",
+    "clothing-half/Big/Paired/elvisCapeTop.webp",
+    "clothing-half/Big/Paired/greenWigTop.webp",
+    "clothing-half/Big/greyWizardHat.webp",
+    "monsters-half/Big/Mouths/excited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Biggs/open.webp",
+    "partial": "monsters-half/Big/Eyes/Biggs/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Biggs/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Biggs/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Biggs/closed.webp"
+   }
+  },
+  {
+   "species": "Biggs",
+   "wearing": [
+    "Black Slippas",
+    "Blue Nail",
+    "Forest Cape",
+    "Beach Bum"
+   ],
+   "layers": [
+    "clothing-half/Big/Paired/beachBumBottom.webp",
+    "clothing-half/Big/Paired/forestCapeBottom.webp",
+    "monsters-half/Big/Arms/Biggs/off.webp",
+    "monsters-half/Big/Arms/Biggs/main.webp",
+    "monsters-half/biggs.webp",
+    "clothing-half/Big/Base/sage.webp",
+    "clothing-half/Big/blackSlippas.webp",
+    "clothing-half/Big/blueNail.webp",
+    "clothing-half/Big/Paired/forestCapeTop.webp",
+    "clothing-half/Big/Paired/beachBumTop.webp",
+    "monsters-half/Big/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Biggs/open.webp",
+    "partial": "monsters-half/Big/Eyes/Biggs/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Biggs/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Biggs/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Biggs/closed.webp"
+   }
+  },
+  {
+   "species": "Biggs",
+   "wearing": [
+    "Broken Crown",
+    "Blue Vest",
+    "Bell Bottoms",
+    "Wine Cape",
+    "Beach Bum",
+    "Cotton Candy"
+   ],
+   "layers": [
+    "clothing-half/Big/Paired/beachBumBottom.webp",
+    "clothing-half/Big/Paired/wineCapeBottom.webp",
+    "clothing-half/Big/Class/cottonCandy.webp",
+    "monsters-half/Big/Arms/Biggs/off.webp",
+    "monsters-half/Big/Arms/Biggs/mainFist.webp",
+    "monsters-half/biggs.webp",
+    "clothing-half/Big/Base/midnight.webp",
+    "clothing-half/Big/bellBottoms.webp",
+    "clothing-half/Big/blueVest.webp",
+    "clothing-half/Big/Paired/wineCapeTop.webp",
+    "clothing-half/Big/Paired/beachBumTop.webp",
+    "clothing-half/Big/brokenCrown.webp",
+    "monsters-half/Big/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Biggs/open.webp",
+    "partial": "monsters-half/Big/Eyes/Biggs/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Biggs/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Biggs/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Biggs/closed.webp"
+   }
+  },
+  {
+   "species": "Biggs",
+   "wearing": [
+    "Light Blue Tank",
+    "Olive Cape",
+    "Elvis Wig",
+    "Cotton Candy"
+   ],
+   "layers": [
+    "clothing-half/Big/Paired/elvisWigBottom.webp",
+    "clothing-half/Big/Paired/oliveCapeBottom.webp",
+    "clothing-half/Big/Class/cottonCandy.webp",
+    "monsters-half/Big/Arms/Biggs/off.webp",
+    "monsters-half/Big/Arms/Biggs/mainFist.webp",
+    "monsters-half/biggs.webp",
+    "clothing-half/Big/greyTank.webp",
+    "clothing-half/Big/Paired/oliveCapeTop.webp",
+    "clothing-half/Big/Paired/elvisWigTop.webp",
+    "monsters-half/Big/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Big/Eyes/Biggs/open.webp",
+    "partial": "monsters-half/Big/Eyes/Biggs/partial.webp",
+    "partialLeft": "monsters-half/Big/Eyes/Biggs/partialLeft.webp",
+    "partialRight": "monsters-half/Big/Eyes/Biggs/partialRight.webp",
+    "closed": "monsters-half/Big/Eyes/Biggs/closed.webp"
+   }
+  },
+  {
+   "species": "Entsy",
+   "wearing": [
+    "White Slippas",
+    "Blue Skateboard",
+    "Blue Vest",
+    "Battle Cape"
+   ],
+   "layers": [
+    "clothing-half/Bottom/blueSkateboard.webp",
+    "clothing-half/Small/Paired/battleCapeBottom.webp",
+    "monsters-half/Small/Arms/Entsy/off.webp",
+    "monsters-half/Small/Arms/Entsy/main.webp",
+    "monsters-half/entsy.webp",
+    "clothing-half/Small/Base/yellow.webp",
+    "clothing-half/Small/whiteSlippas.webp",
+    "clothing-half/Small/blueVest.webp",
+    "clothing-half/Small/Paired/battleCapeTop.webp",
+    "monsters-half/Small/Mouths/excited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Entsy/open.webp",
+    "partial": "monsters-half/Small/Eyes/Entsy/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Entsy/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Entsy/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Entsy/closed.webp"
+   }
+  },
+  {
+   "species": "Entsy",
+   "wearing": [
+    "Blue Skateboard",
+    "Silo Suit",
+    "Bell Bottoms",
+    "Lettuce"
+   ],
+   "layers": [
+    "clothing-half/Bottom/blueSkateboard.webp",
+    "clothing-half/Small/Class/lettuce.webp",
+    "monsters-half/Small/Arms/Entsy/off.webp",
+    "monsters-half/Small/Arms/Entsy/mainFist.webp",
+    "monsters-half/entsy.webp",
+    "clothing-half/Small/Base/grey.webp",
+    "clothing-half/Small/bellBottoms.webp",
+    "clothing-half/Small/siloSuit.webp",
+    "monsters-half/Small/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Entsy/open.webp",
+    "partial": "monsters-half/Small/Eyes/Entsy/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Entsy/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Entsy/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Entsy/closed.webp"
+   }
+  },
+  {
+   "species": "Entsy",
+   "wearing": [
+    "Black Slippas",
+    "Blue Nail",
+    "Black Cape",
+    "Wrench",
+    "Green Stash"
+   ],
+   "layers": [
+    "clothing-half/Small/Paired/blackCapeBottom.webp",
+    "clothing-half/Small/Class/wrench.webp",
+    "monsters-half/Small/Arms/Entsy/off.webp",
+    "monsters-half/Small/Arms/Entsy/mainFist.webp",
+    "monsters-half/entsy.webp",
+    "clothing-half/Small/Base/banana.webp",
+    "clothing-half/Small/blackSlippas.webp",
+    "clothing-half/Small/blueNail.webp",
+    "clothing-half/Small/Paired/blackCapeTop.webp",
+    "monsters-half/Small/Mouths/happy.webp",
+    "monsters-half/Small/Mustaches/greenStashHappy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Entsy/open.webp",
+    "partial": "monsters-half/Small/Eyes/Entsy/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Entsy/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Entsy/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Entsy/closed.webp"
+   }
+  },
+  {
+   "species": "Entsy",
+   "wearing": [
+    "Elvis Kicks",
+    "Ice Hot Board",
+    "Pressed Black",
+    "Forest Cape",
+    "Kettle Bell",
+    "Hairy"
+   ],
+   "layers": [
+    "clothing-half/Bottom/iceHotBoard.webp",
+    "clothing-half/Small/Paired/forestCapeBottom.webp",
+    "clothing-half/Small/Class/kettleBell.webp",
+    "monsters-half/Small/Arms/Entsy/off.webp",
+    "monsters-half/Small/Arms/Entsy/mainFist.webp",
+    "monsters-half/entsy.webp",
+    "clothing-half/Small/elvisKicks.webp",
+    "clothing-half/Small/pressedBlack.webp",
+    "clothing-half/Small/Paired/forestCapeTop.webp",
+    "monsters-half/Small/Mouths/excited.webp",
+    "monsters-half/Small/Mustaches/hairyExcited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Entsy/open.webp",
+    "partial": "monsters-half/Small/Eyes/Entsy/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Entsy/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Entsy/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Entsy/closed.webp"
+   }
+  },
+  {
+   "species": "Entsy",
+   "wearing": [
+    "Hiking Boots",
+    "Ice Hot Board",
+    "Red Propeller",
+    "Captain Suit",
+    "Black Slacks",
+    "Olive Cape",
+    "Pencil"
+   ],
+   "layers": [
+    "clothing-half/Bottom/iceHotBoard.webp",
+    "clothing-half/Small/Paired/oliveCapeBottom.webp",
+    "clothing-half/Small/Class/pencil.webp",
+    "monsters-half/Small/Arms/Entsy/off.webp",
+    "monsters-half/Small/Arms/Entsy/mainFist.webp",
+    "monsters-half/entsy.webp",
+    "clothing-half/Small/Base/fish.webp",
+    "clothing-half/Small/hikingBoots.webp",
+    "clothing-half/Small/blackSlacks.webp",
+    "clothing-half/Small/siloCaptain.webp",
+    "clothing-half/Small/Paired/oliveCapeTop.webp",
+    "clothing-half/Small/redPropeller.webp",
+    "monsters-half/Small/Mouths/excited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Entsy/open.webp",
+    "partial": "monsters-half/Small/Eyes/Entsy/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Entsy/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Entsy/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Entsy/closed.webp"
+   }
+  },
+  {
+   "species": "Jimothy",
+   "wearing": [
+    "Hiking Boots",
+    "Orange Cap",
+    "Green Sash",
+    "Wild Wig"
+   ],
+   "layers": [
+    "clothing-half/Small/Class/wildWigBottom.webp",
+    "monsters-half/Small/Arms/Jimothy/off.webp",
+    "monsters-half/Small/Arms/Jimothy/main.webp",
+    "monsters-half/jimothy.webp",
+    "clothing-half/Small/Base/sage.webp",
+    "clothing-half/Small/hikingBoots.webp",
+    "clothing-half/Small/greenSash.webp",
+    "clothing-half/Small/Class/wildWigTop.webp",
+    "clothing-half/Small/orangeCap.webp",
+    "monsters-half/Small/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Jimothy/open.webp",
+    "partial": "monsters-half/Small/Eyes/Jimothy/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Jimothy/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Jimothy/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Jimothy/closed.webp"
+   }
+  },
+  {
+   "species": "Jimothy",
+   "wearing": [
+    "Red Skate Board",
+    "Purple Vest",
+    "Elvis Wig",
+    "Brush",
+    "Green Beard"
+   ],
+   "layers": [
+    "clothing-half/Bottom/redSkateboard.webp",
+    "clothing-half/Small/Paired/elvisWigBottom.webp",
+    "clothing-half/Small/Class/brush.webp",
+    "monsters-half/Small/Arms/Jimothy/off.webp",
+    "monsters-half/Small/Arms/Jimothy/mainFist.webp",
+    "monsters-half/jimothy.webp",
+    "clothing-half/Small/Base/pink.webp",
+    "clothing-half/Small/purpleVest.webp",
+    "clothing-half/Small/Paired/elvisWigTop.webp",
+    "clothing-half/Small/greenBeard.webp",
+    "monsters-half/Small/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Jimothy/open.webp",
+    "partial": "monsters-half/Small/Eyes/Jimothy/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Jimothy/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Jimothy/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Jimothy/closed.webp"
+   }
+  },
+  {
+   "species": "Jimothy",
+   "wearing": [
+    "Red Roller Blades",
+    "Wine Cape"
+   ],
+   "layers": [
+    "clothing-half/Small/Paired/wineCapeBottom.webp",
+    "monsters-half/Small/Arms/Jimothy/off.webp",
+    "monsters-half/Small/Arms/Jimothy/main.webp",
+    "monsters-half/jimothy.webp",
+    "clothing-half/Small/Base/yellow.webp",
+    "clothing-half/Small/redRollerblades.webp",
+    "clothing-half/Small/Paired/wineCapeTop.webp",
+    "monsters-half/Small/Mouths/excited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Jimothy/open.webp",
+    "partial": "monsters-half/Small/Eyes/Jimothy/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Jimothy/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Jimothy/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Jimothy/closed.webp"
+   }
+  },
+  {
+   "species": "Jimothy",
+   "wearing": [
+    "Teal Slippas",
+    "Red Skate Board",
+    "Yellow Umbrella",
+    "Red Tank",
+    "Black Slacks",
+    "Pencil",
+    "Chin Strap"
+   ],
+   "layers": [
+    "clothing-half/Bottom/redSkateboard.webp",
+    "clothing-half/Small/Class/pencil.webp",
+    "monsters-half/Small/Arms/Jimothy/off.webp",
+    "monsters-half/Small/Arms/Jimothy/mainFist.webp",
+    "monsters-half/jimothy.webp",
+    "clothing-half/Small/Base/banana.webp",
+    "clothing-half/Small/tealSlippas.webp",
+    "clothing-half/Small/blackSlacks.webp",
+    "clothing-half/Small/redTank.webp",
+    "clothing-half/Small/yellowUmbrella.webp",
+    "clothing-half/Small/chinStrap.webp",
+    "monsters-half/Small/Mouths/excited.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Jimothy/open.webp",
+    "partial": "monsters-half/Small/Eyes/Jimothy/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Jimothy/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Jimothy/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Jimothy/closed.webp"
+   }
+  },
+  {
+   "species": "Jimothy",
+   "wearing": [
+    "Red Cowboy Hat",
+    "Green Vest",
+    "Galvanic Screw",
+    "Kettle Bell"
+   ],
+   "layers": [
+    "clothing-half/Small/Class/galvanicScrewBottom.webp",
+    "clothing-half/Small/Class/kettleBell.webp",
+    "monsters-half/Small/Arms/Jimothy/off.webp",
+    "monsters-half/Small/Arms/Jimothy/mainFist.webp",
+    "monsters-half/jimothy.webp",
+    "clothing-half/Small/Base/yellow.webp",
+    "clothing-half/Small/greenVest.webp",
+    "clothing-half/Small/Class/galvanicScrewTop.webp",
+    "clothing-half/Small/redCowboyHat.webp",
+    "monsters-half/Small/Mouths/happy.webp"
+   ],
+   "eyes": {
+    "open": "monsters-half/Small/Eyes/Jimothy/open.webp",
+    "partial": "monsters-half/Small/Eyes/Jimothy/partial.webp",
+    "partialLeft": "monsters-half/Small/Eyes/Jimothy/partialLeft.webp",
+    "partialRight": "monsters-half/Small/Eyes/Jimothy/partialRight.webp",
+    "closed": "monsters-half/Small/Eyes/Jimothy/closed.webp"
+   }
+  }
+ ],
+ "backgrounds": [
+  {
+   "name": "Padded Room",
+   "image": "clothing-half/Background/paddedRoom.webp"
+  },
+  {
+   "name": "Urban Scene",
+   "image": "clothing-half/Background/urban.webp"
+  },
+  {
+   "name": "Play Ground",
+   "image": "clothing-half/Background/playground.webp"
+  },
+  {
+   "name": "Aquarium",
+   "image": "clothing-half/Background/aquarium.webp"
+  },
+  {
+   "name": "The Pools",
+   "image": "clothing-half/Background/thePools.webp"
+  },
+  {
+   "name": "Laboratory",
+   "image": "clothing-half/Background/laboratory.webp"
+  }
+ ]
+}
