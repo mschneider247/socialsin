@@ -12,6 +12,7 @@ import type { ShowcaseMonsterData } from './ShowcaseMonster'
 import { loadShowcase } from './showcase'
 import type { Showcase, ShowcaseBackground } from './showcase'
 import { useReducedMotion } from '../lab/useReducedMotion'
+import { SHOT_WIDTH, shotHeight, shotSrc as mediaShotSrc, shotSrcSet } from '../media'
 import './dice.css'
 
 /**
@@ -67,8 +68,7 @@ function loadImage(src: string, srcSet?: string, sizes?: string) {
   })
 }
 
-const shotSrc = (name: string) => `/img/${name}-400.webp`
-const shotSrcSet = (name: string) => `/img/${name}-400.webp 400w, /img/${name}-800.webp 800w`
+const shotSrc = (name: string) => mediaShotSrc(name, 400)
 
 export default function D20Dock({ links }: { links: { ios: string; android: string } }) {
   const [mounted, setMounted] = useState(false)
@@ -291,8 +291,8 @@ export default function D20Dock({ links }: { links: { ios: string; android: stri
                   src={shotSrc(media.name)}
                   srcSet={shotSrcSet(media.name)}
                   sizes={SHOT_SIZES}
-                  width={800}
-                  height={1734}
+                  width={SHOT_WIDTH}
+                  height={shotHeight(media.name)}
                   alt={media.alt}
                 />
               ) : (

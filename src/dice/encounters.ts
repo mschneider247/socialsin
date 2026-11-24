@@ -1,8 +1,10 @@
 /**
  * What a roll of the D20 shows: one corner of the app (a spotlight), in the
- * lab assistant's voice. Screenshots are the site's own WebP cuts in
- * public/img; add a spotlight here when new ones land.
+ * lab assistant's voice. Screenshots and clips are the site's own cuts
+ * (src/media.ts); add a spotlight here when new ones land.
  */
+import { clipPoster, clipSrc } from '../media'
+import type { ClipName } from '../media'
 
 export type SpotlightMedia =
   | { kind: 'shot'; name: string; alt: string }
@@ -14,6 +16,13 @@ export interface Spotlight {
   line: string
   media: SpotlightMedia
 }
+
+const clip = (name: ClipName, alt: string): SpotlightMedia => ({
+  kind: 'video',
+  src: clipSrc(name),
+  poster: clipPoster(name),
+  alt,
+})
 
 export const SPOTLIGHTS: Spotlight[] = [
   {
@@ -28,16 +37,70 @@ export const SPOTLIGHTS: Spotlight[] = [
     },
   },
   {
-    id: 'arsenal',
-    title: 'ZE ARSENAL',
-    line: 'Every habit you finish becomes a battle move. Harder tiers forge nastier ones. Zen you spend zem on your rivals.',
-    media: { kind: 'shot', name: 'arsenal-attack', alt: 'The Arsenal screen, full of attack moves earned from habits' },
+    id: 'termites',
+    title: 'TERMITE PACK',
+    line: 'Zey chew ze ladders, zey chew ze supports, and zen zey come for ze monster. Build a loadout and squash zem, dahling.',
+    media: clip('termite-fight', 'A termite pack fight in the dig, won by knockout'),
   },
   {
-    id: 'heal',
-    title: 'FIELD MEDICINE',
-    line: 'Not every move is a punch. Heals and buffs, all earned ze honest vay: by doing ze habit.',
-    media: { kind: 'shot', name: 'arsenal-heal', alt: 'The Arsenal screen filtered to healing moves' },
+    id: 'buried-six',
+    title: 'ZE BURIED SIX',
+    line: 'Six bosses sleep under ze silo. Vake one and it is a real ranked battle, so bring your best moves.',
+    media: clip('boss-fight', 'A buried boss awakens and the monster beats it turn by turn'),
+  },
+  {
+    id: 'escaped',
+    title: 'ESCAPED!',
+    line: 'Climb ze last ladder and ze monster keeps everyzing it dug. Tomorrow it vants out again.',
+    media: clip('escape-levelup', 'The monster climbs out of the silo, escapes and levels up'),
+  },
+  {
+    id: 'boulders',
+    title: 'MORE BOULDERS',
+    line: 'One ladder from freedom and ze silo starts shaking loose. Climb faster, Doctor.',
+    media: { kind: 'shot', name: 'dig-top-ladder', alt: 'The monster at the top of the last ladder as boulders shake loose' },
+  },
+  {
+    id: 'slug',
+    title: 'BRAIN SLUG',
+    line: 'Hidden in ze trash, deep in ze silo. Brain slugs power your monster\'s class, and zey cannot be bought.',
+    media: { kind: 'shot', name: 'dig-brain-slug', alt: 'BRAIN SLUG SECURED: a brain slug found deep in the silo' },
+  },
+  {
+    id: 'combo',
+    title: 'HABIT COMBO',
+    line: 'Finish a few habits in one stat and ze XP stacks up. Ze monster likes zis very much.',
+    media: clip('habit-combo', 'A habit is logged and a HABIT COMBO bursts over the home screen'),
+  },
+  {
+    id: 'voice',
+    title: 'ZE TIMER LISTENS',
+    line: 'Say START, STOP or LOG and ze habit timer obeys. Your hands stay on ze kettlebell, dahling.',
+    media: clip('voice-timer', 'A habit timer started and stopped by voice'),
+  },
+  {
+    id: 'closet',
+    title: 'ZE CLOSET',
+    line: 'Hats, silo suits, a bone saw. Every stitch drawn by hand, and ze monster vears it all into battle.',
+    media: clip('closet', 'Swapping hats and outfits in the closet'),
+  },
+  {
+    id: 'app-d20',
+    title: 'ZE OTHER D20',
+    line: 'Ze app has a D20 too. Roll it on Home for mimics, ambushes, and a forge zat fuses two habits into one move.',
+    media: clip('d20', 'Rolling the in-app D20 and landing ZE FORGE IS HOT'),
+  },
+  {
+    id: 'shield',
+    title: 'STORM SHIELD',
+    line: 'Save a habit before it slips and ze monster valks into its next fight behind a shield. Ze termites hate zis.',
+    media: { kind: 'shot', name: 'storm-shield', alt: 'A battle replay opening with a Storm Shield: the monster entered with +5 shield' },
+  },
+  {
+    id: 'specimen',
+    title: 'ZE SPECIMEN',
+    line: 'Your monster, its six stats and today\'s habits. It is vatching you, Doctor.',
+    media: { kind: 'shot', name: 'home-bio', alt: 'A monster on the home screen, ringed by its six stats' },
   },
   {
     id: 'record',
@@ -56,18 +119,6 @@ export const SPOTLIGHTS: Spotlight[] = [
     title: 'RIVALS',
     line: 'Only real Doctors on ze board, and it remembers every lab-bred bot zey have flattened.',
     media: { kind: 'shot', name: 'rivals-leaderboard', alt: 'The Rivals leaderboard' },
-  },
-  {
-    id: 'happy',
-    title: 'GOOD MOOD',
-    line: 'Finish ze habits and ze monster glows. Look at zat face, dahling.',
-    media: { kind: 'shot', name: 'monster-happy', alt: 'A happy monster after a day of finished habits' },
-  },
-  {
-    id: 'sad',
-    title: 'BAD MOOD',
-    line: 'Skip ze habits and ze monster sulks. It is a disgrace!',
-    media: { kind: 'shot', name: 'monster-sad', alt: 'A sad monster with the day\'s habits still unchecked' },
   },
 ]
 

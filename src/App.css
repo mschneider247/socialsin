@@ -547,6 +547,59 @@
   transform: translateY(-2px);
 }
 
+/* Cards with gameplay clips (src/LoopClip.tsx): grid cards stack a phone
+   on top, the wide Dig card sets its pair beside the text. */
+.feature-card--clip {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature-clips {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.feature-clip {
+  display: block;
+  width: min(100%, 150px);
+  height: auto;
+  aspect-ratio: 1 / 2;
+  border-radius: 1rem;
+  background: #000;
+  box-shadow:
+    0 0 0 1px var(--border),
+    0 12px 32px rgba(0, 0, 0, 0.55),
+    0 0 24px rgba(var(--accent-rgb), 0.06);
+}
+
+.feature-card--wide.feature-card--clip {
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.feature-card--wide .feature-clips {
+  flex: 0 0 auto;
+}
+
+.feature-card--wide .feature-clip {
+  width: 170px;
+}
+
+@media (max-width: 700px) {
+  .feature-card--wide.feature-card--clip {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .feature-card--wide .feature-clip {
+    width: min(46%, 170px);
+  }
+}
+
 .feature-label {
   display: inline-block;
   font-size: 0.7rem;

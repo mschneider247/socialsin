@@ -1,6 +1,9 @@
 import './App.css'
 import D20Dock from './dice/D20Dock'
 import AmbientLab from './lab/AmbientLab'
+import LoopClip from './LoopClip'
+import { SHOT_WIDTH, shotHeight, shotSrc, shotSrcSet } from './media'
+import type { ClipName } from './media'
 
 const LINKS = {
   ios: 'https://apps.apple.com/us/app/habit-beast-monster-trainer/id6760268226',
@@ -33,44 +36,66 @@ const SUBHEADS = [
 // Hero demo clip — swap the file in public/ and update this one path.
 const DEMO_VIDEO = '/DigDemo.mp4'
 
+interface Clip {
+  name: ClipName
+  alt: string
+}
+
+interface Feature {
+  label: string
+  title: string
+  description: string
+  /** Short gameplay loops shown with the card (src/LoopClip.tsx). */
+  clips?: Clip[]
+}
+
 // The Dig leads (players took to it more than PvP); habits stay the engine.
-const DIG_FEATURE = {
+const DIG_FEATURE: Feature = {
   label: 'The Dig',
   title: 'Dig Your Way Out',
   description:
-    'Your monster wants out of the lab. Tunnel up a pitch-black silo by the glow of a single light: carve paths, build ladders and supports, dodge falling rocks, and fend off termite swarms that chew through everything you build. Bosses lie buried in the dirt and brain slugs hide in the deep. Keep your habits and the dig gets easier. Skip a few days and it gets brutal.',
+    'Your monster wants out of the lab. Tunnel up a pitch-black silo by the glow of a single light: carve paths, build ladders and supports, dodge falling boulders, and fight off termite packs that chew through everything you build. The Buried Six sleep in the dirt, each one a real ranked battle, and brain slugs hide in the deep. Stuck? Bail out and keep what you dug. Keep your habits and the dig gets easier. Skip a few days and it gets brutal.',
+  clips: [
+    { name: 'termite-fight', alt: 'A termite pack attacks in the dig: the monster builds a loadout, wins by knockout and clears the swarm' },
+    { name: 'escape-levelup', alt: 'The monster climbs the last ladder out of the silo, escapes with its loot and levels up' },
+  ],
 }
 
-const FEATURES = [
+const FEATURES: Feature[] = [
   {
     label: 'You Are the Doctor',
     title: 'Train Your Monster',
     description:
-      'Pick one of nine lovably out-of-shape creatures — then name it, dress it, and drag it into shape through daily habits. Your monster is hopeless without you.',
+      'Roll the D20 for one of nine lovably out-of-shape creatures, no account needed. Name it, dress it in hand-drawn gear from hats to silo suits to a class tool (a bone saw, perhaps), and drag it into shape through daily habits. Your monster is hopeless without you.',
+    clips: [{ name: 'closet', alt: 'The closet: swapping hats and outfits on a monster, slot by slot' }],
   },
   {
     label: '70+ Habits',
     title: 'Six Stats. Real Stakes.',
     description:
-      'Train across Exercise, Health, Clean, Community, Creativity, and Mental. 70+ habits with up to five tiers each — every completion earns XP and battle moves, and harder tiers unlock stronger ones.',
+      'Train across Exercise, Health, Clean, Community, Creativity, and Mental. 70+ habits with up to five tiers each — every completion earns XP and battle moves, a few in one stat stack into a combo bonus, and harder tiers unlock stronger moves.',
+    clips: [{ name: 'habit-combo', alt: 'A habit timer logs a session, then a HABIT COMBO bursts over the home screen' }],
   },
   {
     label: 'Arsenal',
     title: 'Then Challenge Your Rivals',
     description:
-      'Build a loadout from hundreds of possible moves and take on real players and lab-bred bots. Ranked battles burn the moves you use, win or lose — go earn them back.',
+      'Build a loadout from hundreds of possible moves and take on real players, lab-bred bots and the bosses under the silo. Ranked battles burn the moves you use, win or lose — go earn them back. Save an at-risk habit in time and your monster walks into its next fight behind a Storm Shield.',
+    clips: [{ name: 'boss-fight', alt: 'A buried boss awakens: the monster builds a loadout, fights it turn by turn and wins' }],
   },
   {
     label: 'Ze D20',
     title: 'Roll for Trouble',
     description:
       'Every so often a twenty-sided die peeks into the lab. Roll it for one of over two dozen random encounters: a mimic that grows teeth, a surprise ambush, a brain swap, a wardrobe malfunction. Land a critical success and a bounty goes up on one of your habits, worth a brain slug if your monster finishes it within the hour.',
+    clips: [{ name: 'd20', alt: 'Rolling the D20 on the home screen and landing a ZE FORGE IS HOT encounter' }],
   },
   {
     label: 'Hands-Free',
     title: 'Ze Lab Takes Dictation',
     description:
-      'Speak your to-dos and the lab assistant writes them down. Hands busy mid-plank? Tell the habit timer START, STOP or LOG and it obeys.',
+      'Speak your to-dos and the lab assistant writes them down. Hands busy mid-plank? Tell the habit timer START, STOP or LOG and it obeys. Link a song to any habit and its timer cues up your anthem.',
+    clips: [{ name: 'voice-timer', alt: 'A rucking timer starts and stops by voice, flashing HEARD: START and HEARD: STOP' }],
   },
   {
     label: 'No Tricks',
@@ -80,17 +105,17 @@ const FEATURES = [
   },
 ]
 
-// Phone screenshots, served as resized WebP from public/img (cut from the
-// 1080×2340 originals with ffmpeg): 400w fills the desktop columns, 800w the
-// full-width mobile layout. width/height reserve the space so nothing jumps.
+// Phone screenshots, served as resized WebP from public/img (src/media.ts):
+// 400w fills the desktop columns, 800w the full-width mobile layout.
+// width/height reserve the space so nothing jumps.
 function Shot({ name, alt, sizes, className }: { name: string; alt: string; sizes: string; className?: string }) {
   return (
     <img
-      src={`/img/${name}-800.webp`}
-      srcSet={`/img/${name}-400.webp 400w, /img/${name}-800.webp 800w`}
+      src={shotSrc(name)}
+      srcSet={shotSrcSet(name)}
       sizes={sizes}
-      width={800}
-      height={1734}
+      width={SHOT_WIDTH}
+      height={shotHeight(name)}
       alt={alt}
       loading="lazy"
       decoding="async"
@@ -180,22 +205,22 @@ export default function App() {
 
       <section className="media-section">
         <div className="media-row media-row--primary">
-          <div className="media-col media-col--sad">
+          <div className="media-col">
             <Shot
-              name="monster-sad"
-              alt="A sad, out-of-shape Habit Beast monster at level 3, with the day's habits still unchecked"
+              name="home-bio"
+              alt="A Habit Beast monster in a wizard hat on the home screen of a bio lab, ringed by its six stats with the day's habits below"
               sizes={PRIMARY_SIZES}
               className="media-img"
             />
           </div>
-          <div className="media-col media-col--happy">
+          <div className="media-col">
             <Shot
-              name="monster-happy"
-              alt="A happy, well-trained Habit Beast monster at level 29 in hand-drawn gear, ringed by its six stats"
+              name="habit-combo"
+              alt="A HABIT COMBO bursting over the home screen: +9 XP for four Exercise habits in one day"
               sizes={PRIMARY_SIZES}
               className="media-img"
             />
-            <p className="media-label">Your monster feels everything</p>
+            <p className="media-label">Every habit feeds ze beast</p>
           </div>
           <div className="media-col media-col--video">
             <video
@@ -204,26 +229,26 @@ export default function App() {
               poster="/img/dig-demo-poster.jpg"
               width={480}
               height={960}
-              aria-label="Gameplay: a habit timer logs a run, then the monster digs through the silo, meets a boss swarm and wins a battle"
+              aria-label="Gameplay: a habit combo, then the monster digs up the silo, knocks out a termite pack, beats a buried boss and escapes"
               autoPlay
               muted
               loop
               playsInline
             />
           </div>
-          <div className="media-col media-col--arsenal1">
+          <div className="media-col">
             <Shot
-              name="arsenal-attack"
-              alt="Battle arsenal of attack moves earned from habits, like Scrub Blast and Water Laser"
+              name="boss-loadout"
+              alt="DEEPGAZE AVAKENS: building a loadout from the arsenal before a buried boss fight, with its projected impact"
               sizes={PRIMARY_SIZES}
               className="media-img"
             />
             <p className="media-label">Habits become weapons</p>
           </div>
-          <div className="media-col media-col--arsenal2">
+          <div className="media-col">
             <Shot
-              name="arsenal-heal"
-              alt="Battle arsenal of heal moves earned from habits, like Family Bond and Grateful Glow"
+              name="boss-replay"
+              alt="A battle replay against the boss Dreadloam, turn 5 of 6, with shields, burns and a type advantage hit"
               sizes={PRIMARY_SIZES}
               className="media-img"
             />
@@ -288,17 +313,9 @@ export default function App() {
       <section className="features-section" aria-labelledby="features-heading">
         <h2 id="features-heading" className="sr-only">What's in ze lab</h2>
         <div className="features-inner">
-          <div className="feature-card" style={{ gridColumn: '1 / -1' }}>
-            <span className="feature-label">{DIG_FEATURE.label}</span>
-            <h3 className="feature-title">{DIG_FEATURE.title}</h3>
-            <p className="feature-desc">{DIG_FEATURE.description}</p>
-          </div>
+          <FeatureCard feature={DIG_FEATURE} wide />
           {FEATURES.map((f) => (
-            <div key={f.label} className="feature-card">
-              <span className="feature-label">{f.label}</span>
-              <h3 className="feature-title">{f.title}</h3>
-              <p className="feature-desc">{f.description}</p>
-            </div>
+            <FeatureCard key={f.label} feature={f} />
           ))}
           <div className="feature-card" style={{ gridColumn: '1 / -1' }}>
             <span className="feature-label">From the Developer</span>
@@ -378,6 +395,30 @@ export default function App() {
       </footer>
 
       <D20Dock links={LINKS} />
+    </div>
+  )
+}
+
+// A wide card puts its clips beside the text; a grid card stacks a clip on top.
+function FeatureCard({ feature, wide }: { feature: Feature; wide?: boolean }) {
+  const clips = feature.clips ?? []
+  const className = ['feature-card', wide && 'feature-card--wide', clips.length > 0 && 'feature-card--clip']
+    .filter(Boolean)
+    .join(' ')
+  return (
+    <div className={className} style={wide ? { gridColumn: '1 / -1' } : undefined}>
+      {clips.length > 0 && (
+        <div className="feature-clips">
+          {clips.map((clip) => (
+            <LoopClip key={clip.name} name={clip.name} alt={clip.alt} className="feature-clip" />
+          ))}
+        </div>
+      )}
+      <div className="feature-text">
+        <span className="feature-label">{feature.label}</span>
+        <h3 className="feature-title">{feature.title}</h3>
+        <p className="feature-desc">{feature.description}</p>
+      </div>
     </div>
   )
 }
